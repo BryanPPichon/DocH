@@ -1,0 +1,2416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <!-- MAIN VERTICAL LINE -->
+    <div class="fixed top-0 left-6 lg:left-18 h-screen w-px bg-[#d7a795] z-40 pointer-events-none"></div>
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="h-20 flex items-center justify-between">
+                <!-- LOGO -->
+                <a href="#hero">
+                    <img src="img/logo.png" alt="Doc Holliday" class="h-10 w-auto">
+                </a>
+                <!-- DESKTOP NAV -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#section01" class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition">
+                        HAIR & BEARD CARE
+                    </a>
+                    <a href="#section02" class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition">
+                        INGREDIENTS
+                    </a>
+                    <a href="#section03" class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition">
+                        COLOGNES
+                    </a>
+                    <a href="#section04" class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition">
+                        FEATURED
+                    </a>
+                    <a href="#section05" class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition">
+                        PROCESS
+                    </a>
+                    <a href="#section06" class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition">
+                        CONTACT
+                    </a>
+                </nav>
+                <!-- MOBILE BUTTON -->
+                <button id="menuBtn" class="lg:hidden flex flex-col gap-1">
+                    <span class="w-6 h-px bg-white"></span>
+                    <span class="w-6 h-px bg-white"></span>
+                    <span class="w-6 h-px bg-white"></span>
+                </button>
+            </div>
+        </div>
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="hidden bg-black/95 backdrop-blur-md">
+            <nav class="flex flex-col p-8 gap-6">
+                <a href="#section01">HAIR & BEARD CARE</a>
+                <a href="#section02">INGREDIENTS</a>
+                <a href="#section03">COLOGNES</a>
+                <a href="#section04">FEATURED</a>
+                <a href="#section05">PROCESS</a>
+                <a href="#section06">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECTION INDEX LEFT -->
+    <div class="absolute top-20 left-2 lg:left-8 flex flex-col items-center">
+        <span class="text-[10px] tracking-[0.35em] text-[#d7a795]">
+            01
+        </span>
+        <div class="w-px h-24 bg-[#d7a795] my-4"></div>
+        <span class="[writing-mode:vertical-rl] rotate-180 text-[10px] tracking-[0.35em] uppercase text-[#d7a795]">
+            HAIR & BEARD CARE
+        </span>
+    </div>
+
+    <section id="hero"
+        class=" relative min-h-screen bg-cover bg-center bg-[url('img/desktop/hero.jpg')] max-md:bg-[url('img/mobile/hero.jpg')]">
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-black/45">
+        </div>
+        <div class="relative z-10 min-h-screen max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-3 gap-16 items-center">
+            <!-- LEFT -->
+            <div class="text-center lg:text-left">
+                <h1 class="text-5xl lg:text-7xl">
+                    DOC HOLLIDAY
+                </h1>
+                <p class="mt-6 max-w-md">
+                    Premium Hair & Beard Care Crafted For Modern Gentlemen.
+                </p>
+            </div>
+            <!-- CENTER -->
+            <div class="flex flex-col items-center justify-center">
+                <span class="text-sm tracking-[0.3em] uppercase">
+                    Scroll To Explore
+                </span>
+                <button class="mt-6 h-16 w-8 rounded-full border border-[#d7a795] flex items-center justify-center">
+                    ↓
+                </button>
+            </div>
+            <!-- RIGHT -->
+            <div class="text-center lg:text-right">
+                <h2 class="text-3xl lg:text-5xl">
+                    Signature Grooming
+                </h2>
+                <p class="mt-6 ml-auto max-w-md">
+                    Luxury ingredients, timeless fragrances and elevated performance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 01 -->
+    <section id="section01"
+        class=" relative py-32 bg-cover bg-center bg-[url('img/desktop/section01.jpg')] max-md:bg-[url('img/mobile/section01.jpg')] ">
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-black/75"></div>
+        <!-- INDEX -->
+        <div class="absolute top-20 left-2 lg:left-8 flex flex-col items-center z-20">
+            <span class="text-[10px] tracking-[0.35em] text-[#d7a795]">
+                01
+            </span>
+            <div class="w-px h-24 bg-[#d7a795] my-4">
+            </div>
+            <span class=" [writing-mode:vertical-rl] rotate-180 text-[10px] tracking-[0.35em] uppercase text-[#d7a795]">
+                HAIR & BEARD CARE
+            </span>
+        </div>
+        <div class=" relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+            <!-- TOP CONTENT -->
+            <div class=" grid lg:grid-cols-2 gap-12 mb-20">
+                <!-- TITLE -->
+                <div>
+                    <span class=" text-sm tracking-[0.3em] uppercase text-[#d7a795]">
+                        Hair & Beard Care
+                    </span>
+                    <h2 class=" mt-6 text-4xl lg:text-6xl leading-tight">
+                        Elevating Daily Grooming Through Premium Craftsmanship.
+                    </h2>
+                </div>
+                <!-- PARAGRAPH -->
+                <div class="flex items-end">
+                    <p class="lg:text-right text-neutral-300 leading-relaxed max-w-xl lg:ml-auto max-lg:text-center">
+                        Designed to nourish, strengthen and refine every aspect of your grooming routine. Our formulas
+                        combine timeless barbershop traditions with modern performance ingredients to create products
+                        worthy of daily use.
+                    </p>
+                </div>
+            </div>
+            <!-- GRID -->
+            <div class="grid grid-cols-3 grid-rows-2 gap-0 ">
+                <!-- CELL 1 -->
+                <div class="flex flex-col lg:flex-row gap-4 p-6 border-r border-b border-[#d7a795]">
+                    <img src="img/section01/item01.jpg" alt="" class=" w-full lg:w-24 aspect-square object-cover">
+                    <div>
+                        <h3 class="font-medium">
+                            Beard Oils
+                        </h3>
+                        <p class="mt-2 text-sm text-neutral-400">
+                            Deep nourishment and conditioning.
+                        </p>
+                    </div>
+                </div>
+                <!-- CELL 2 -->
+
+                <div class="
+                flex
+                flex-col
+                lg:flex-row
+
+                gap-4
+
+                p-6
+
+                border-r
+                border-b
+
+                border-[#d7a795]">
+
+                    <img src="img/section01/item02.jpg" alt="" class="w-full lg:w-24 aspect-square object-cover">
+
+                    <div>
+
+                        <h3>Balms</h3>
+
+                        <p class="mt-2 text-sm text-neutral-400">
+
+                            Control and texture without heaviness.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CELL 3 -->
+
+                <div class="
+                flex
+                flex-col
+                lg:flex-row
+
+                gap-4
+
+                p-6
+
+                border-b
+
+                border-[#d7a795]">
+
+                    <img src="img/section01/item03.jpg" alt="" class="w-full lg:w-24 aspect-square object-cover">
+
+                    <div>
+
+                        <h3>Pomades</h3>
+
+                        <p class="mt-2 text-sm text-neutral-400">
+
+                            Flexible hold with natural shine.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CELL 4 -->
+
+                <div class="
+                flex
+                flex-col
+                lg:flex-row
+
+                gap-4
+
+                p-6
+
+                border-r
+
+                border-[#d7a795]">
+
+                    <img src="img/section01/item04.jpg" alt="" class="w-full lg:w-24 aspect-square object-cover">
+
+                    <div>
+
+                        <h3>Shampoos</h3>
+
+                        <p class="mt-2 text-sm text-neutral-400">
+
+                            Cleansing without stripping moisture.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CELL 5 -->
+
+                <div class="
+                flex
+                flex-col
+                lg:flex-row
+
+                gap-4
+
+                p-6
+
+                border-r
+
+                border-[#d7a795]">
+
+                    <img src="img/section01/item05.jpg" alt="" class="w-full lg:w-24 aspect-square object-cover">
+
+                    <div>
+
+                        <h3>Conditioners</h3>
+
+                        <p class="mt-2 text-sm text-neutral-400">
+
+                            Softness, strength and manageability.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CELL 6 -->
+
+                <div class="
+                flex
+                flex-col
+                lg:flex-row
+
+                gap-4
+
+                p-6">
+
+                    <img src="img/section01/item06.jpg" alt="" class="w-full lg:w-24 aspect-square object-cover">
+
+                    <div>
+
+                        <h3>Styling Creams</h3>
+
+                        <p class="mt-2 text-sm text-neutral-400">
+
+                            Natural movement and refined texture.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 02 -->
+    <section id="section02" class="
+    relative
+
+    py-32
+
+    bg-cover
+    bg-center
+
+    bg-[url('img/desktop/section02.jpg')]
+    max-md:bg-[url('img/mobile/section02.jpg')]
+    ">
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-black/75"></div>
+
+        <!-- INDEX -->
+        <div class="
+        absolute
+
+        top-20
+        left-2
+        lg:left-8
+
+        flex
+        flex-col
+        items-center
+
+        z-20">
+
+            <span class="
+            text-[10px]
+            tracking-[0.35em]
+            text-[#d7a795]">
+
+                02
+
+            </span>
+
+            <div class="
+            w-px
+            h-24
+
+            my-4
+
+            bg-[#d7a795]">
+            </div>
+
+            <span class="
+            [writing-mode:vertical-rl]
+            rotate-180
+
+            text-[10px]
+            tracking-[0.35em]
+
+            uppercase
+
+            text-[#d7a795]">
+
+                OUR INGREDIENTS
+
+            </span>
+
+        </div>
+
+        <div class="
+        relative
+        z-10
+
+        max-w-7xl
+        mx-auto
+
+        px-6
+        lg:px-12">
+
+            <!-- TOP GRID -->
+
+            <div class="
+            grid
+            lg:grid-cols-2
+
+            gap-16
+
+            mb-24">
+
+                <!-- LEFT -->
+
+                <div class="
+                flex
+                items-center
+                justify-center
+                lg:justify-start">
+
+                    <div>
+
+                        <span class="
+                        text-sm
+                        tracking-[0.3em]
+                        uppercase
+                        text-[#d7a795]">
+
+                            Our Ingredients
+
+                        </span>
+
+                        <h2 class="
+                        mt-6
+
+                        text-4xl
+                        lg:text-6xl
+
+                        leading-tight
+
+                        text-center
+                        lg:text-left">
+
+                            Nature Meets Performance.
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="
+                flex
+                flex-col
+                justify-center
+
+                gap-8">
+
+                    <p class="
+                    text-neutral-300
+
+                    leading-relaxed
+
+                    text-center
+                    lg:text-left">
+
+                        Every ingredient is selected to deliver visible results while
+                        maintaining the health of your hair, beard and skin.
+
+                    </p>
+
+                    <p class="
+                    text-neutral-300
+
+                    leading-relaxed
+
+                    text-center
+                    lg:text-left">
+
+                        We combine proven botanical extracts with modern grooming science
+                        to create products that feel luxurious and perform exceptionally.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- INGREDIENT GRID -->
+
+            <div class="
+            grid
+
+            grid-cols-2
+            grid-rows-2
+
+            border-t
+
+            border-[#d7a795]">
+
+                <!-- CARD 01 -->
+
+                <div class="
+                flex
+
+                gap-6
+
+                p-8
+
+                border-r
+                border-b
+
+                border-[#d7a795]">
+
+                    <img src="img/section02/ingredient01.jpg" alt="Argan Oil" class="
+                    w-24
+                    h-24
+
+                    object-cover
+                    shrink-0">
+
+                    <div>
+
+                        <h3 class="
+                        text-xl
+                        mb-3">
+
+                            Argan Oil
+
+                        </h3>
+
+                        <p class="
+                        text-sm
+                        text-neutral-400">
+
+                            Rich in antioxidants and essential fatty acids for deep hydration and shine.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 02 -->
+
+                <div class="
+                flex
+
+                gap-6
+
+                p-8
+
+                border-b
+
+                border-[#d7a795]">
+
+                    <img src="img/section02/ingredient02.jpg" alt="Jojoba Oil" class="
+                    w-24
+                    h-24
+
+                    object-cover
+                    shrink-0">
+
+                    <div>
+
+                        <h3 class="
+                        text-xl
+                        mb-3">
+
+                            Jojoba Oil
+
+                        </h3>
+
+                        <p class="
+                        text-sm
+                        text-neutral-400">
+
+                            Helps balance moisture while softening coarse hair and beard fibers.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 03 -->
+
+                <div class="
+                flex
+
+                gap-6
+
+                p-8
+
+                border-r
+
+                border-[#d7a795]">
+
+                    <img src="img/section02/ingredient03.jpg" alt="Shea Butter" class="
+                    w-24
+                    h-24
+
+                    object-cover
+                    shrink-0">
+
+                    <div>
+
+                        <h3 class="
+                        text-xl
+                        mb-3">
+
+                            Shea Butter
+
+                        </h3>
+
+                        <p class="
+                        text-sm
+                        text-neutral-400">
+
+                            Provides nourishment, protection and long-lasting softness.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 04 -->
+
+                <div class="
+                flex
+
+                gap-6
+
+                p-8">
+
+                    <img src="img/section02/ingredient04.jpg" alt="Vitamin E" class="
+                    w-24
+                    h-24
+
+                    object-cover
+                    shrink-0">
+
+                    <div>
+
+                        <h3 class="
+                        text-xl
+                        mb-3">
+
+                            Vitamin E
+
+                        </h3>
+
+                        <p class="
+                        text-sm
+                        text-neutral-400">
+
+                            Supports healthy skin and helps protect against environmental stress.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 03 -->
+    <section id="section03" class="
+    relative
+
+    py-32
+
+    bg-cover
+    bg-center
+
+    bg-[url('img/desktop/section03.jpg')]
+    max-md:bg-[url('img/mobile/section03.jpg')]
+    ">
+
+        <!-- OVERLAY -->
+
+        <div class="absolute inset-0 bg-black/75"></div>
+
+        <!-- DESKTOP INDEX -->
+
+        <div class="
+        hidden lg:flex
+
+        absolute
+        top-20
+        right-8
+
+        flex-col
+        items-center
+
+        z-20">
+        </div>
+
+        <!-- MOBILE INDEX -->
+
+        <div class="
+        lg:hidden
+
+        absolute
+        top-20
+        left-2
+
+        flex
+        flex-col
+        items-center
+
+        z-20">
+
+            <span class="
+            text-[10px]
+            tracking-[0.35em]
+            text-[#d7a795]">
+
+                03
+
+            </span>
+
+            <div class="
+            w-px
+            h-24
+            my-4
+
+            bg-[#d7a795]">
+            </div>
+
+            <span class="
+            [writing-mode:vertical-rl]
+            rotate-180
+
+            text-[10px]
+            tracking-[0.35em]
+
+            uppercase
+
+            text-[#d7a795]">
+
+                COLOGNES
+
+            </span>
+
+        </div>
+
+        <div class="
+        relative
+        z-10
+
+        max-w-7xl
+        mx-auto
+
+        px-6
+        lg:px-12">
+
+            <div class="
+            grid
+            lg:grid-cols-2
+
+            gap-20
+
+            items-center">
+
+                <!-- LEFT COLUMN -->
+
+                <div class="
+                max-md:text-center">
+
+                    <span class="
+                    text-sm
+                    tracking-[0.3em]
+                    uppercase
+                    text-[#d7a795]">
+
+                        Colognes
+
+                    </span>
+
+                    <h2 class="
+                    mt-6
+
+                    text-4xl
+                    lg:text-6xl
+
+                    leading-tight">
+
+                        Fragrances Designed To Leave A Lasting Impression.
+
+                    </h2>
+
+                    <!-- DESKTOP BUTTON -->
+
+                    <button id="carouselNextDesktop" class="
+                    hidden lg:flex
+
+                    mt-12
+
+                    h-16
+                    w-16
+
+                    items-center
+                    justify-center
+
+                    rounded-full
+
+                    border
+
+                    border-[#d7a795]
+
+                    text-[#d7a795]
+
+                    text-2xl
+
+                    transition
+
+                    hover:bg-[#d7a795]
+                    hover:text-black">
+
+                        ←
+
+                    </button>
+
+                    <p class="
+                    mt-12
+
+                    text-neutral-300
+
+                    leading-relaxed">
+
+                        Discover a collection of signature fragrances inspired by timeless masculinity, crafted to
+                        accompany every moment of the modern gentleman.
+
+                    </p>
+
+                    <p class="
+                    mt-8
+
+                    flex
+
+                    max-md:justify-center
+
+                    items-center
+
+                    gap-3
+
+                    text-sm
+
+                    tracking-[0.2em]
+
+                    uppercase
+
+                    text-[#d7a795]">
+
+                        Explore Collection
+
+                        <span>→</span>
+
+                    </p>
+
+                </div>
+
+                <!-- RIGHT COLUMN -->
+
+                <div>
+
+                    <div class="
+                    overflow-hidden">
+
+                        <div id="carouselTrack" class="
+                        flex
+
+                        transition-transform
+                        duration-700
+                        ease-out">
+
+                            <!-- CARD 1 -->
+
+                            <article class="
+                            shrink-0
+
+                            w-full
+                            lg:w-[45%]
+
+                            mr-6">
+
+                                <img src="img/section03/cologne01.jpg" alt="" class="
+                                w-full
+
+                                aspect-[4/5]
+
+                                object-cover">
+
+                                <h3 class="
+                                mt-6
+
+                                text-2xl">
+
+                                    Black Oak
+
+                                </h3>
+
+                                <p class="
+                                mt-3
+
+                                text-neutral-400">
+
+                                    Warm woods, leather and tobacco.
+
+                                </p>
+
+                            </article>
+
+                            <!-- CARD 2 -->
+
+                            <article class="
+                            shrink-0
+
+                            w-full
+                            lg:w-[45%]
+
+                            mr-6">
+
+                                <img src="img/section03/cologne02.jpg" alt="" class="
+                                w-full
+
+                                aspect-[4/5]
+
+                                object-cover">
+
+                                <h3 class="
+                                mt-6
+
+                                text-2xl">
+
+                                    Desert Smoke
+
+                                </h3>
+
+                                <p class="
+                                mt-3
+
+                                text-neutral-400">
+
+                                    Incense, cedarwood and amber.
+
+                                </p>
+
+                            </article>
+
+                            <!-- CARD 3 -->
+
+                            <article class="
+                            shrink-0
+
+                            w-full
+                            lg:w-[45%]">
+
+                                <img src="img/section03/cologne03.jpg" alt="" class="
+                                w-full
+
+                                aspect-[4/5]
+
+                                object-cover">
+
+                                <h3 class="
+                                mt-6
+
+                                text-2xl">
+
+                                    Golden Trail
+
+                                </h3>
+
+                                <p class="
+                                mt-3
+
+                                text-neutral-400">
+
+                                    Citrus, spice and sandalwood.
+
+                                </p>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                    <!-- MOBILE BUTTONS -->
+
+                    <div class="
+                    lg:hidden
+
+                    flex
+
+                    justify-center
+
+                    gap-6
+
+                    mt-10">
+
+                        <button id="carouselPrevMobile" class="
+                        h-14
+                        w-14
+
+                        rounded-full
+
+                        border
+
+                        border-[#d7a795]
+
+                        text-[#d7a795]">
+
+                            ←
+
+                        </button>
+
+                        <button id="carouselNextMobile" class="
+                        h-14
+                        w-14
+
+                        rounded-full
+
+                        border
+
+                        border-[#d7a795]
+
+                        text-[#d7a795]">
+
+                            →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 04 -->
+    <section id="section04" class="
+    relative
+
+    py-32
+
+    bg-cover
+    bg-center
+
+    bg-[url('img/desktop/section04.jpg')]
+    max-md:bg-[url('img/mobile/section04.jpg')]
+    ">
+
+        <!-- OVERLAY -->
+
+        <div class="absolute inset-0 bg-black/75"></div>
+
+        <!-- INDEX -->
+
+        <div class="
+        absolute
+
+        top-20
+        left-2
+        lg:left-8
+
+        flex
+        flex-col
+        items-center
+
+        z-20">
+
+            <span class="
+            text-[10px]
+            tracking-[0.35em]
+            text-[#d7a795]">
+
+                04
+
+            </span>
+
+            <div class="
+            w-px
+            h-24
+
+            my-4
+
+            bg-[#d7a795]">
+            </div>
+
+            <span class="
+            [writing-mode:vertical-rl]
+            rotate-180
+
+            text-[10px]
+            tracking-[0.35em]
+
+            uppercase
+
+            text-[#d7a795]">
+
+                FEATURED
+
+            </span>
+
+        </div>
+
+        <div class="
+        relative
+        z-10
+
+        max-w-7xl
+        mx-auto
+
+        px-6
+        lg:px-12">
+
+            <!-- TITLE -->
+
+            <div class="
+            max-w-4xl
+            mx-auto
+
+            text-center">
+
+                <span class="
+                text-sm
+                tracking-[0.3em]
+                uppercase
+                text-[#d7a795]">
+
+                    Featured Collection
+
+                </span>
+
+                <h2 class="
+                mt-6
+
+                text-4xl
+                lg:text-6xl
+
+                leading-tight">
+
+                    The Essentials Every Gentleman Needs.
+
+                </h2>
+
+                <p class="
+                mt-10
+
+                text-neutral-300
+
+                leading-relaxed
+
+                lg:text-right
+
+                max-w-3xl
+                mx-auto">
+
+                    Discover our most celebrated products, selected for their craftsmanship, performance and ability to
+                    elevate your daily grooming ritual.
+
+                </p>
+
+                <p class="
+                mt-6
+
+                text-neutral-400
+
+                leading-relaxed
+
+                lg:text-right
+
+                max-w-3xl
+                mx-auto">
+
+                    From nourishing beard oils to signature fragrances, every product reflects our commitment to premium
+                    quality and timeless style.
+
+                </p>
+
+            </div>
+
+            <!-- GRID -->
+
+            <div class="
+            mt-24
+
+            grid
+
+            grid-cols-1
+            lg:grid-cols-5
+
+            gap-6">
+
+                <!-- CARD 01 -->
+
+                <article class="
+                group
+
+                transition-all
+                duration-500
+
+                hover:scale-105
+                hover:z-20">
+
+                    <img src="img/section04/product01.jpg" alt="" class="
+                    w-full
+
+                    aspect-[4/5]
+
+                    object-cover">
+
+                    <h3 class="
+                    mt-6
+
+                    text-center
+
+                    text-xl">
+
+                        Premium Beard Oil
+
+                    </h3>
+
+                    <p class="
+                    mt-3
+
+                    text-center
+
+                    text-neutral-400">
+
+                        Hydration, softness and shine in every drop.
+
+                    </p>
+
+                </article>
+
+                <!-- CARD 02 -->
+
+                <article class="
+                group
+
+                transition-all
+                duration-500
+
+                hover:scale-105
+                hover:z-20">
+
+                    <img src="img/section04/product02.jpg" alt="" class="
+                    w-full
+
+                    aspect-[4/5]
+
+                    object-cover">
+
+                    <h3 class="
+                    mt-6
+
+                    text-center
+
+                    text-xl">
+
+                        Styling Pomade
+
+                    </h3>
+
+                    <p class="
+                    mt-3
+
+                    text-center
+
+                    text-neutral-400">
+
+                        Flexible hold with a refined finish.
+
+                    </p>
+
+                </article>
+
+                <!-- CARD 03 -->
+
+                <article class="
+                group
+
+                transition-all
+                duration-500
+
+                hover:scale-105
+                hover:z-20">
+
+                    <img src="img/section04/product03.jpg" alt="" class="
+                    w-full
+
+                    aspect-[4/5]
+
+                    object-cover">
+
+                    <h3 class="
+                    mt-6
+
+                    text-center
+
+                    text-xl">
+
+                        Signature Cologne
+
+                    </h3>
+
+                    <p class="
+                    mt-3
+
+                    text-center
+
+                    text-neutral-400">
+
+                        A timeless scent crafted for confidence.
+
+                    </p>
+
+                </article>
+
+                <!-- CARD 04 -->
+
+                <article class="
+                group
+
+                transition-all
+                duration-500
+
+                hover:scale-105
+                hover:z-20">
+
+                    <img src="img/section04/product04.jpg" alt="" class="
+                    w-full
+
+                    aspect-[4/5]
+
+                    object-cover">
+
+                    <h3 class="
+                    mt-6
+
+                    text-center
+
+                    text-xl">
+
+                        Daily Shampoo
+
+                    </h3>
+
+                    <p class="
+                    mt-3
+
+                    text-center
+
+                    text-neutral-400">
+
+                        Cleanses while preserving natural moisture.
+
+                    </p>
+
+                </article>
+
+                <!-- CARD 05 -->
+
+                <article class="
+                group
+
+                transition-all
+                duration-500
+
+                hover:scale-105
+                hover:z-20">
+
+                    <img src="img/section04/product05.jpg" alt="" class="
+                    w-full
+
+                    aspect-[4/5]
+
+                    object-cover">
+
+                    <h3 class="
+                    mt-6
+
+                    text-center
+
+                    text-xl">
+
+                        Beard Balm
+
+                    </h3>
+
+                    <p class="
+                    mt-3
+
+                    text-center
+
+                    text-neutral-400">
+
+                        Control, nourishment and texture combined.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 05 -->
+    <section id="section05" class="
+    relative
+
+    py-32
+
+    bg-cover
+    bg-center
+
+    bg-[url('img/desktop/section05.jpg')]
+    max-md:bg-[url('img/mobile/section05.jpg')]
+    ">
+
+        <!-- OVERLAY -->
+
+        <div class="absolute inset-0 bg-black/75"></div>
+
+        <!-- DESKTOP INDEX -->
+
+        <div class="
+        hidden lg:flex
+
+        absolute
+
+        top-20
+        right-8
+
+        flex-col
+        items-center
+
+        z-20">
+
+        </div>
+
+        <!-- MOBILE INDEX -->
+
+        <div class="
+        lg:hidden
+
+        absolute
+
+        top-20
+        left-2
+
+        flex
+        flex-col
+        items-center
+
+        z-20">
+
+            <span class="
+            text-[10px]
+            tracking-[0.35em]
+            text-[#d7a795]">
+
+                05
+
+            </span>
+
+            <div class="
+            w-px
+            h-24
+
+            my-4
+
+            bg-[#d7a795]">
+            </div>
+
+            <span class="
+            [writing-mode:vertical-rl]
+            rotate-180
+
+            text-[10px]
+            tracking-[0.35em]
+
+            uppercase
+
+            text-[#d7a795]">
+
+                PROCESS
+
+            </span>
+
+        </div>
+
+        <div class="
+        relative
+        z-10
+
+        max-w-7xl
+        mx-auto
+
+        px-6
+        lg:px-12">
+
+            <!-- TOP -->
+
+            <div class="
+            grid
+
+            lg:grid-cols-3
+
+            gap-12
+
+            mb-24">
+
+                <!-- TITLE -->
+
+                <div class="
+                max-md:text-center">
+
+                    <h2 class="
+                    text-4xl
+                    lg:text-6xl
+
+                    leading-tight">
+
+                        Our Process.
+
+                    </h2>
+
+                </div>
+
+                <!-- PARAGRAPH -->
+
+                <div class="
+                flex
+                items-center">
+
+                    <p class="
+                    text-neutral-300
+
+                    leading-relaxed
+
+                    max-md:text-center">
+
+                        Every product is developed through a meticulous process that combines premium ingredients,
+                        modern formulation techniques and timeless grooming traditions.
+
+                    </p>
+
+                </div>
+
+                <!-- EMPTY DESKTOP / INDEX SPACE -->
+
+                <div></div>
+
+            </div>
+
+            <!-- PROCESS GRID -->
+
+            <div class="
+            lg:ml-auto
+
+            lg:max-w-4xl">
+
+                <div class="
+                grid
+
+                grid-cols-[120px_1fr]
+
+                border-t
+
+                border-[#d7a795]">
+
+                    <!-- ROW 01 -->
+
+                    <div class="
+                    flex
+                    items-center
+                    justify-center
+
+                    border-r
+                    border-b
+
+                    border-[#d7a795]
+
+                    py-10">
+
+                        <span class="
+                        text-5xl
+                        lg:text-7xl
+
+                        text-[#d7a795]">
+
+                            1
+
+                        </span>
+
+                    </div>
+
+                    <div class="
+                    border-b
+
+                    border-[#d7a795]
+
+                    p-8">
+
+                        <h3 class="
+                        text-2xl">
+
+                            Ingredient Selection
+
+                        </h3>
+
+                        <p class="
+                        mt-4
+
+                        text-neutral-400">
+
+                            Only premium botanical extracts and performance-driven ingredients make it into our
+                            formulations.
+
+                        </p>
+
+                    </div>
+
+                    <!-- ROW 02 -->
+
+                    <div class="
+                    flex
+                    items-center
+                    justify-center
+
+                    border-r
+                    border-b
+
+                    border-[#d7a795]
+
+                    py-10">
+
+                        <span class="
+                        text-5xl
+                        lg:text-7xl
+
+                        text-[#d7a795]">
+
+                            2
+
+                        </span>
+
+                    </div>
+
+                    <div class="
+                    border-b
+
+                    border-[#d7a795]
+
+                    p-8">
+
+                        <h3 class="
+                        text-2xl">
+
+                            Formulation
+
+                        </h3>
+
+                        <p class="
+                        mt-4
+
+                        text-neutral-400">
+
+                            Each product is tested and refined to ensure exceptional performance and consistency.
+
+                        </p>
+
+                    </div>
+
+                    <!-- ROW 03 -->
+
+                    <div class="
+                    flex
+                    items-center
+                    justify-center
+
+                    border-r
+                    border-b
+
+                    border-[#d7a795]
+
+                    py-10">
+
+                        <span class="
+                        text-5xl
+                        lg:text-7xl
+
+                        text-[#d7a795]">
+
+                            3
+
+                        </span>
+
+                    </div>
+
+                    <div class="
+                    border-b
+
+                    border-[#d7a795]
+
+                    p-8">
+
+                        <h3 class="
+                        text-2xl">
+
+                            Quality Control
+
+                        </h3>
+
+                        <p class="
+                        mt-4
+
+                        text-neutral-400">
+
+                            Every batch is inspected to meet our standards for effectiveness, safety and luxury.
+
+                        </p>
+
+                    </div>
+
+                    <!-- ROW 04 -->
+
+                    <div class="
+                    flex
+                    items-center
+                    justify-center
+
+                    border-r
+
+                    border-[#d7a795]
+
+                    py-10">
+
+                        <span class="
+                        text-5xl
+                        lg:text-7xl
+
+                        text-[#d7a795]">
+
+                            4
+
+                        </span>
+
+                    </div>
+
+                    <div class="
+                    p-8">
+
+                        <h3 class="
+                        text-2xl">
+
+                            Delivery Experience
+
+                        </h3>
+
+                        <p class="
+                        mt-4
+
+                        text-neutral-400">
+
+                            Carefully packaged products arrive ready to elevate your grooming ritual from day one.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <div class="
+                mt-12
+
+                max-md:flex
+                max-md:justify-center">
+
+                    <a href="#section06" class="
+                    inline-flex
+
+                    items-center
+
+                    gap-4
+
+                    px-10
+                    py-5
+
+                    border
+
+                    border-[#d7a795]
+
+                    text-[#d7a795]
+
+                    transition
+
+                    hover:bg-[#d7a795]
+                    hover:text-black">
+
+                        LEARN MORE
+
+                        <span>
+
+                            →
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION 06 -->
+    <section id="section06" class="
+    relative
+
+    py-32
+
+    bg-cover
+    bg-center
+
+    bg-[url('img/desktop/section06.jpg')]
+    max-md:bg-[url('img/mobile/section06.jpg')]
+    ">
+
+        <!-- OVERLAY -->
+
+        <div class="absolute inset-0 bg-black/75"></div>
+
+        <!-- INDEX -->
+
+        <div class="
+        absolute
+
+        top-20
+        left-2
+        lg:left-8
+
+        flex
+        flex-col
+        items-center
+
+        z-20">
+
+            <span class="
+            text-[10px]
+            tracking-[0.35em]
+            text-[#d7a795]">
+
+                06
+
+            </span>
+
+            <div class="
+            w-px
+            h-24
+
+            my-4
+
+            bg-[#d7a795]">
+            </div>
+
+            <span class="
+            [writing-mode:vertical-rl]
+            rotate-180
+
+            text-[10px]
+            tracking-[0.35em]
+
+            uppercase
+
+            text-[#d7a795]">
+
+                CONTACT
+
+            </span>
+
+        </div>
+
+        <div class="
+        relative
+        z-10
+
+        max-w-7xl
+        mx-auto
+
+        px-6
+        lg:px-12">
+
+            <!-- DESKTOP -->
+
+            <div class="
+            hidden
+            lg:grid
+
+            lg:grid-cols-2
+
+            gap-24">
+
+                <!-- LEFT COLUMN -->
+
+                <div>
+
+                    <h2 class="
+                    text-6xl
+
+                    leading-tight">
+
+                        Let's Start A Conversation.
+
+                    </h2>
+
+                    <p class="
+                    mt-10
+
+                    text-neutral-300
+
+                    leading-relaxed">
+
+                        Whether you're looking for premium grooming products,
+                        partnership opportunities or simply have a question,
+                        we'd love to hear from you.
+
+                    </p>
+
+                    <!-- SEPARATOR -->
+
+                    <div class="
+                    mt-16
+
+                    w-full
+                    h-px
+
+                    bg-[#d7a795]">
+                    </div>
+
+                    <p class="
+                    mt-16
+
+                    text-neutral-400
+
+                    leading-relaxed">
+
+                        Our team is dedicated to providing a luxury experience from
+                        your first interaction to your final purchase.
+
+                    </p>
+
+                    <h3 class="
+                    mt-10
+
+                    text-3xl">
+
+                        Premium Support.
+                    </h3>
+
+                </div>
+
+                <!-- RIGHT COLUMN -->
+
+                <div>
+
+                    <h3 class="
+                    text-3xl">
+
+                        Contact Form
+
+                    </h3>
+
+                    <p class="
+                    mt-4
+
+                    text-neutral-400">
+
+                        Complete the form below and our team will respond shortly.
+
+                    </p>
+
+                    <form class="
+                    mt-10
+
+                    flex
+                    flex-col
+
+                    gap-5">
+
+                        <input type="text" placeholder="Full Name" class="
+                        w-full
+
+                        bg-transparent
+
+                        border
+
+                        border-[#d7a795]
+
+                        px-5
+                        py-4
+
+                        outline-none
+
+                        placeholder:text-neutral-500">
+
+                        <input type="email" placeholder="Email Address" class="
+                        w-full
+
+                        bg-transparent
+
+                        border
+
+                        border-[#d7a795]
+
+                        px-5
+                        py-4
+
+                        outline-none
+
+                        placeholder:text-neutral-500">
+
+                        <textarea placeholder="Message" rows="8" class="
+                        w-full
+
+                        resize-none
+
+                        bg-transparent
+
+                        border
+
+                        border-[#d7a795]
+
+                        px-5
+                        py-4
+
+                        outline-none
+
+                        placeholder:text-neutral-500"></textarea>
+
+                        <button type="submit" class="
+                        w-full
+
+                        border
+
+                        border-[#d7a795]
+
+                        px-5
+                        py-4
+
+                        text-[#d7a795]
+
+                        transition
+
+                        hover:bg-[#d7a795]
+                        hover:text-black">
+
+                            SEND MESSAGE →
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- MOBILE -->
+
+            <div class="
+            lg:hidden">
+
+                <!-- TITLE -->
+
+                <h2 class="
+                text-4xl
+
+                leading-tight">
+
+                    Let's Start A Conversation.
+
+                </h2>
+
+                <!-- PARAGRAPH -->
+
+                <p class="
+                mt-8
+
+                text-neutral-300
+
+                leading-relaxed">
+
+                    Whether you're looking for premium grooming products,
+                    partnership opportunities or simply have a question,
+                    we'd love to hear from you.
+
+                </p>
+
+                <!-- SEPARATOR -->
+
+                <div class="
+                mt-12
+
+                w-full
+                h-px
+
+                bg-[#d7a795]">
+                </div>
+
+                <!-- FORM -->
+
+                <div class="
+                mt-12">
+
+                    <h3 class="
+                    text-center
+
+                    text-2xl">
+
+                        Contact Form
+
+                    </h3>
+
+                    <p class="
+                    mt-4
+
+                    text-center
+
+                    text-neutral-400">
+
+                        Complete the form below and our team will respond shortly.
+
+                    </p>
+
+                    <form class="
+                    mt-8
+
+                    flex
+                    flex-col
+
+                    gap-5">
+
+                        <input type="text" placeholder="Full Name" class="
+                        w-full
+
+                        bg-transparent
+
+                        border
+
+                        border-[#d7a795]
+
+                        px-5
+                        py-4
+
+                        outline-none
+
+                        placeholder:text-neutral-500">
+
+                        <input type="email" placeholder="Email Address" class="
+                        w-full
+
+                        bg-transparent
+
+                        border
+
+                        border-[#d7a795]
+
+                        px-5
+                        py-4
+
+                        outline-none
+
+                        placeholder:text-neutral-500">
+
+                        <textarea placeholder="Message" rows="7" class="
+                        w-full
+
+                        resize-none
+
+                        bg-transparent
+
+                        border
+
+                        border-[#d7a795]
+
+                        px-5
+                        py-4
+
+                        outline-none
+
+                        placeholder:text-neutral-500"></textarea>
+
+                        <button type="submit" class="
+                        w-full
+
+                        border
+
+                        border-[#d7a795]
+
+                        px-5
+                        py-4
+
+                        text-[#d7a795]
+
+                        transition
+
+                        hover:bg-[#d7a795]
+                        hover:text-black">
+
+                            SEND MESSAGE →
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <!-- BOTTOM ROW -->
+
+                <div class="
+                mt-16
+
+                grid
+                grid-cols-2
+
+                gap-8
+
+                items-start">
+
+                    <h3 class="
+                    text-xl">
+
+                        Premium Support.
+
+                    </h3>
+
+                    <p class="
+                    text-right
+
+                    text-neutral-400">
+
+                        Our team is dedicated to providing a luxury experience from
+                        your first interaction to your final purchase.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative z-50 bg-[#30111c] px-6 lg:px-12">
+
+        <!-- SHOP THE COLLECTION BANNER -->
+        <div class="w-full py-10 md:pt-10 lg:py-16 text-center border-t border-white/10">
+            <p class="text-[10px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-widest uppercase mb-4">
+                Ready to refine your routine?
+            </p>
+            <h2
+                class="font-[Majesty] text-4xl md:text-[28px] md:leading-7 lg:text-[44px] lg:leading-11 xl:text-[55px] xl:leading-13 tracking-tight text-white font-bold mb-1 md:mb-2 lg:mb-5">
+                Shop the collection
+            </h2>
+            <a href="#"
+                class="inline-flex items-center gap-3 text-[11px] md:text-[11px] lg:text-[12px] xl:text-[14px] tracking-[0.22em] text-white uppercase transition-opacity duration-300 hover:opacity-70">
+                SHOP NOW
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="border-t border-[#d7a795]"></div>
+
+        <!-- MAIN FOOTER BODY -->
+        <div class="max-w-7xl mx-auto py-12 md:py-14">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 items-start">
+
+                <!-- LEFT: Logo -->
+                <div class="flex items-center justify-start md:justify-start">
+                    <div class="flex flex-col items-start">
+                        <img src="img/LOGO2.png" alt="Doc Holliday Logo"
+                            class="h-28 md:h-24 lg:h-32 xl:h-40 2xl:h-50 w-auto object-contain">
+                    </div>
+                </div>
+
+                <!-- CENTER: Quick Links (with vertical dividers) -->
+                <div class="flex items-stretch justify-center">
+                    <!-- Left divider -->
+                    <div class="hidden md:block w-0.5 bg-[#d7a795]/70 self-stretch mx-10 2xl:mx-15"></div>
+
+                    <div class="flex flex-col items-center gap-5">
+                        <p
+                            class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] font-bold tracking-[0.2em] text-white underline underline-offset-4 mb-1">
+                            QUICK LINKS
+                        </p>
+                        <a href="#"
+                            class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-[0.18em] text-white transition duration-300 hover:text-white">
+                            SHOP
+                        </a>
+                        <a href="#intro"
+                            class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-[0.18em] text-white transition duration-300 hover:text-white">
+                            ABOUT
+                        </a>
+                        <a href="#ingredients"
+                            class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-[0.18em] text-white transition duration-300 hover:text-white">
+                            INGREDIENTS
+                        </a>
+                        <a href="#contact"
+                            class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-[0.18em] text-white transition duration-300 hover:text-white">
+                            CONTACT
+                        </a>
+                    </div>
+
+                    <!-- Right divider -->
+                    <div class="hidden md:block w-0.5 bg-[#d7a795]/70 self-stretch mx-10 2xl:mx-15"></div>
+                </div>
+
+                <!-- RIGHT: Follow social -->
+                <div class="flex flex-col items-start md:items-center gap-6">
+                    <p
+                        class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] font-bold tracking-[0.2em] text-white underline underline-offset-4">
+                        FOLLOW DOC HOLLIDAY
+                    </p>
+                    <div class="flex items-center gap-6 md:gap-5 lg:gap-7">
+                        <!-- Facebook -->
+                        <a href="#" aria-label="Facebook"
+                            class="text-white/80 transition-all duration-300 hover:text-white hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-8 h-8 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10" viewBox="0 0 24 24"
+                                fill="currentColor" aria-hidden="true">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" aria-label="Instagram"
+                            class="text-white/80 transition-all duration-300 hover:text-white hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-8 h-8 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+                            </svg>
+                        </a>
+                        <!-- Amazon -->
+                        <a href="https://www.amazon.com/" target="_blank" aria-label="Amazon"
+                            class="text-white/80 transition-all duration-300 hover:text-white hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-8 h-8 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10" viewBox="0 0 24 24"
+                                fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.7-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.872-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.659 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.891 5.942-1.099v-.41c0-.753.06-1.642-.384-2.294-.385-.579-1.124-.82-1.774-.82-1.205 0-2.277.618-2.54 1.897-.054.285-.261.567-.547.582l-3.055-.33c-.259-.058-.548-.266-.472-.66C6.35 2.695 9.498 2 12.321 2c1.452 0 3.351.385 4.499 1.484 1.454 1.354 1.315 3.165 1.315 5.134v4.647c0 1.397.58 2.011 1.126 2.767.191.268.233.589-.01.788l-2.107 1.975zm3.325 1.987C18.253 21.505 15.42 22.962 12.9 23c-2.667 0-5.314-.971-7.217-2.579-.148-.128-.016-.303.163-.203 2.053 1.193 4.591 1.909 7.211 1.909 1.768 0 3.713-.366 5.503-1.12.271-.115.499.179.242.411v.364zm.671 1.921c-.202.265-.671.124-.975-.063-2.715-1.664-6.875-2.148-10.097-1.175-.428.13-.879-.112-.703-.539.433-1.041 1.556-1.524 3.183-1.817 2.974-.541 6.509.038 8.936 1.636.382.244.441.793.154 1.144l-.498.814z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div class="border-t border-white/10">
+            <div class="max-w-7xl mx-auto py-4 flex flex-col md:flex-row items-center justify-between gap-3">
+                <p
+                    class="text-[10px] md:text-[9px] lg:text-[10px] xl:text-[11px] tracking-[0.15em] text-white order-2 md:order-1">
+                    2026 DOC HOLLIDAY. ALL RIGHTS RESERVED
+                </p>
+                <a href="#"
+                    class="text-[10px] md:text-[9px] lg:text-[10px] xl:text-[11px] tracking-[0.15em] text-white transition duration-300 hover:text-white order-3 md:order-2">
+                    PRIVACY POLICY
+                </a>
+                <a href="#"
+                    class="text-[10px] md:text-[9px] lg:text-[10px] xl:text-[11px] tracking-[0.15em] text-white transition duration-300 hover:text-white order-4 md:order-3">
+                    TERMS OF SERVICE
+                </a>
+                <p
+                    class="text-[10px] md:text-[9px] lg:text-[10px] xl:text-[11px] font-bold tracking-[0.15em] text-white flex items-center gap-1.5 order-1 md:order-4 underline underline-offset-2">
+                    MADE IN THE USA
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" viewBox="0 0 24 24"
+                        fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/carrusel.js"></script>
+</body>
+
+</html>
