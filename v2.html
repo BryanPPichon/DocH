@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
-  <body>
+  <body class="bg-black text-white font-[Helvetica,Arial,sans-serif]">
     <!-- MAIN VERTICAL LINE -->
     <div
       class="fixed top-0 left-6 lg:left-18 h-screen w-px bg-[#d7a795] z-40 pointer-events-none"
@@ -15,7 +15,7 @@
 
     <!-- NAVBAR -->
     <header class="fixed top-0 left-0 w-full z-50">
-      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="max-w-[88%] mx-auto px-6 lg:px-12">
         <div class="h-20 flex items-center justify-between">
           <!-- LOGO -->
           <a href="#hero">
@@ -25,39 +25,45 @@
           <nav class="hidden lg:flex items-center gap-8">
             <a
               href="#section01"
-              class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition"
+              class="text-sm tracking-widest hover:text-[#d7a795] transition"
+            >
+              INTRO
+            </a>
+            <a
+              href="#section02"
+              class="text-sm tracking-widest hover:text-[#d7a795] transition"
             >
               HAIR & BEARD CARE
             </a>
             <a
-              href="#section02"
-              class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition"
+              href="#section03"
+              class="text-sm tracking-widest hover:text-[#d7a795] transition"
+            >
+              HAIR & BEARD CARE
+            </a>
+            <a
+              href="#section04"
+              class="text-sm tracking-widest hover:text-[#d7a795] transition"
             >
               INGREDIENTS
             </a>
             <a
-              href="#section03"
-              class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition"
+              href="#section05"
+              class="text-sm tracking-widest hover:text-[#d7a795] transition"
             >
               COLOGNES
             </a>
             <a
-              href="#section04"
-              class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition"
+              href="#section06"
+              class="text-sm tracking-widest hover:text-[#d7a795] transition"
             >
-              FEATURED
-            </a>
-            <a
-              href="#section05"
-              class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition"
-            >
-              PROCESS
+              CONTACT
             </a>
             <a
               href="#section06"
-              class="text-sm tracking-[0.14em] hover:text-[#d7a795] transition"
+              class="text-sm tracking-widest hover:text-[#d7a795] transition duration-300"
             >
-              CONTACT
+              SHOP ON AMAZON
             </a>
           </nav>
           <!-- MOBILE BUTTON -->
@@ -83,48 +89,57 @@
 
     <!-- SECTION INDEX LEFT -->
     <div class="absolute top-20 left-2 lg:left-8 flex flex-col items-center">
-      <span class="text-[10px] tracking-[0.35em] text-[#d7a795]"> 01 </span>
+      <span class="text-[10px] tracking-widest text-[#d7a795]"> 01 </span>
       <div class="w-px h-24 bg-[#d7a795] my-4"></div>
       <span
-        class="[writing-mode:vertical-rl] rotate-180 text-[10px] tracking-[0.35em] uppercase text-[#d7a795]"
+        class="[writing-mode:vertical-rl] rotate-180 text-[10px] tracking-widest uppercase text-[#d7a795]"
       >
         HAIR & BEARD CARE
       </span>
     </div>
 
-    <section
-      id="hero"
-      class="relative min-h-screen bg-cover bg-center bg-[url('img/desktop/hero.jpg')] max-md:bg-[url('img/mobile/hero.jpg')]"
-    >
+    <section id="hero" class="relative w-full overflow-hidden">
+      <!-- IMÁGENES PARA COMPORTAMIENTO RESPONSIVO Y DEFINIR ALTURA -->
+      <img
+        src="img/banner2.png"
+        alt="Doc Holliday Banner"
+        class="w-full h-auto hidden md:block"
+      />
+      <img
+        src="img/banner.png"
+        alt="Doc Holliday Banner Mobile"
+        class="w-full h-auto md:hidden"
+      />
+
       <!-- OVERLAY -->
-      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="absolute inset-0"></div>
       <div
-        class="relative z-10 min-h-screen max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-3 gap-16 items-center"
+        class="absolute inset-0 z-10 h-full max-w-4/5 mx-auto grid lg:grid-cols-3 gap-20 items-stretch overflow-y-auto"
       >
         <!-- LEFT -->
-        <div class="text-center lg:text-left">
-          <h1 class="text-5xl lg:text-7xl">DOC HOLLIDAY</h1>
-          <p class="mt-6 max-w-md">
-            Premium Hair & Beard Care Crafted For Modern Gentlemen.
-          </p>
+        <div class="text-center sm:text-left">
+          <h1 class="absolute top-[46%] left-[5%] text-[15px] md:text-[10px] lg:text-[11px] xl:text-[20px] tracking-widest">NO GIMMICKS,<br>JUST A PROPER ROUTINE</h1>
+          <img src="img/say when.png" alt="Say When" class="absolute w-[13%] bottom-[27%] left-[5%]"/>
         </div>
         <!-- CENTER -->
-        <div class="flex flex-col items-center justify-center">
-          <span class="text-sm tracking-[0.3em] uppercase">
-            Scroll To Explore
-          </span>
-          <button
-            class="mt-6 h-16 w-8 rounded-full border border-[#d7a795] flex items-center justify-center"
-          >
-            ↓
-          </button>
+        <div class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-end h-full bottom-[7%]">
+            <span
+                class="text-center text-[15px] md:text-[10px] lg:text-[11px] xl:text-[20px] tracking-widest flex flex-col items-center">
+                SCROLL TO<br>EXPLORE
+            </span>
+        
+            <div
+                class="scroll-oval flex h-11 w-7 sm:h-17 sm:w-12 md:h-12 md:w-8 items-center justify-center rounded-full border-2 border-[#d7a795]">
+                <svg class="scroll-arrow h-15 w-10 text-[#d7a795]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 5v10" />
+                    <path d="M7 11l5 5 5-5" />
+                </svg>
+            </div>
         </div>
         <!-- RIGHT -->
         <div class="text-center lg:text-right">
-          <h2 class="text-3xl lg:text-5xl">Signature Grooming</h2>
-          <p class="mt-6 ml-auto max-w-md">
-            Luxury ingredients, timeless fragrances and elevated performance.
-          </p>
+          <img src="img/Look great_Smell great_Feel great.png" alt="Look Great, Smell Great, Feel Great" class="absolute w-[16%] bottom-[17%] right-0" />
         </div>
       </div>
     </section>
