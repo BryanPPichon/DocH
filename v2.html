@@ -6,6 +6,14 @@
     <title>Doc Holliday</title>
     <link rel="icon" href="img/favicon.png" type="image/png" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      /* Oscurecer hermanas cuando una card está en hover */
+      .group\/cards article:hover ~ article,
+      .group\/cards article:has(~ :hover) {
+        opacity: 0.4;
+        transition: opacity 0.5s ease-out;
+      }
+    </style>
   </head>
 
   <body class="bg-black text-white font-[Helvetica,Arial,sans-serif]">
@@ -629,124 +637,137 @@
         </span>
       </div>
 
-      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="relative z-10 max-w-[90%] mx-auto px-6 lg:px-12">
         <!-- TITLE -->
-
+            <span class="text-[12px] xl:text-[16px] tracking-widest">
+                04 PRODUCT INGREDIENTS AND DIFFERENTIATORS <br> <br>
+            </span>
+            
         <div class="max-w-4xl mx-auto text-center">
-          <span class="text-sm tracking-[0.3em] uppercase text-[#d7a795]">
-            Featured Collection
-          </span>
-
-          <h2 class="mt-6 text-4xl lg:text-6xl leading-tight">
-            The Essentials Every Gentleman Needs.
+          
+          <h2 class="mt-6 text-4xl md:text-[38px] lg:text-[48px] xl:text-[60px] leading-tight md:leading-9 lg:leading-10 xl:leading-13 font-[Majesty]">
+            Formulated <br> with Purpose
           </h2>
 
-          <p
-            class="mt-10 text-neutral-300 leading-relaxed lg:text-right max-w-3xl mx-auto"
-          >
-            Discover our most celebrated products, selected for their
-            craftsmanship, performance and ability to elevate your daily
-            grooming ritual.
+          <p class="mt-6 text-neutral-400 md:text-[10px] lg:text-[12px] xl:text-[16px] leading-relaxed md:text-left pl-32">
+            Doc Holliday Essentials was developed with a level of ingredient intentionality that is
+            genuinely rare.
           </p>
 
-          <p
-            class="mt-6 text-neutral-400 leading-relaxed lg:text-right max-w-3xl mx-auto"
-          >
-            From nourishing beard oils to signature fragrances, every product
-            reflects our commitment to premium quality and timeless style.
+          <p class="mt-6 text-neutral-400 md:text-[10px] lg:text-[12px] xl:text-[16px] leading-relaxed md:text-left pl-32">
+            Desert-native botanicals, hand-chosen oils, and precision actives selected for their
+            performance, <br>unified by a signature scent as singular and considered as Doc Holliday
+             himself.
           </p>
         </div>
 
         <!-- GRID -->
 
-        <div class="mt-24 grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <div class="mt-24 grid grid-cols-1 lg:grid-cols-5 gap-12 group/cards">
           <!-- CARD 01 -->
 
           <article
-            class="group transition-all duration-500 hover:scale-105 hover:z-20"
+            class="group/card transition-all duration-500 hover:scale-120 hover:z-20"
           >
             <img
-              src="img/section04/product01.jpg"
+              src="img/1_INGREDIENTES.png"
               alt=""
               class="w-full aspect-[4/5] object-cover"
             />
 
-            <h3 class="mt-6 text-center text-xl">Premium Beard Oil</h3>
+            <h3 class="mt-6 text-center text-xl font-[Majesty]">Desert botanicals</h3>
 
-            <p class="mt-3 text-center text-neutral-400">
-              Hydration, softness and shine in every drop.
+            <p class="mt-3 text-center text-neutral-400 leading-tight">
+              <span class="whitespace-nowrap">Aloe, agave, jojoba, and</span> <br>
+              <span class="whitespace-nowrap">prickly pear help hydrate,</span> <br>
+              <span class="whitespace-nowrap">calm, and keep the formulas</span> <br>
+              <span class="whitespace-nowrap">balanced</span>
             </p>
           </article>
 
           <!-- CARD 02 -->
 
           <article
-            class="group transition-all duration-500 hover:scale-105 hover:z-20"
+            class="group/card transition-all duration-500 hover:scale-120 hover:z-20"
           >
             <img
-              src="img/section04/product02.jpg"
+              src="img/2_INGREDIENTES.png"
               alt=""
               class="w-full aspect-[4/5] object-cover"
             />
 
-            <h3 class="mt-6 text-center text-xl">Styling Pomade</h3>
+            <h3 class="mt-6 text-center text-xl font-[Majesty] whitespace-nowrap">Performance ingredients</h3>
 
-            <p class="mt-3 text-center text-neutral-400">
-              Flexible hold with a refined finish.
+            <p class="mt-3 text-center text-neutral-400 leading-tight">
+              <span class="whitespace-nowrap">Hydrolyzed rice protein,</span> <br>
+              <span class="whitespace-nowrap">omegas 3, 6, and 9, and</span> <br>
+              <span class="whitespace-nowrap">vitamins B5, B7 and E help</span> <br>
+              <span class="whitespace-nowrap">support softness, body, and a</span> <br>
+              <span class="whitespace-nowrap">healthier-looking finish</span>
             </p>
           </article>
 
           <!-- CARD 03 -->
 
           <article
-            class="group transition-all duration-500 hover:scale-105 hover:z-20"
+            class="group/card transition-all duration-500 hover:scale-120 hover:z-20"
           >
             <img
-              src="img/section04/product03.jpg"
+              src="img/3_INGREDIENTES.png"
               alt=""
               class="w-full aspect-[4/5] object-cover"
             />
 
-            <h3 class="mt-6 text-center text-xl">Signature Cologne</h3>
+            <h3 class="mt-6 text-center text-xl font-[Majesty]">Premium oils</h3>
 
-            <p class="mt-3 text-center text-neutral-400">
-              A timeless scent crafted for confidence.
+            <p class="mt-3 text-center text-neutral-400 leading-tight">
+              <span class="whitespace-nowrap">Argan, sacha inchi,</span> <br>
+              <span class="whitespace-nowrap">grapeseed, castor, marula,</span> <br>
+              <span class="whitespace-nowrap">kukui, and apricot kernel oils</span> <br>
+              <span class="whitespace-nowrap">help condition and smooth</span> <br>
+              <span class="whitespace-nowrap">without heaviness</span>
             </p>
           </article>
 
           <!-- CARD 04 -->
 
           <article
-            class="group transition-all duration-500 hover:scale-105 hover:z-20"
+            class="group/card transition-all duration-500 hover:scale-120 hover:z-20"
           >
             <img
-              src="img/section04/product04.jpg"
+              src="img/4_INGREDIENTES.png"
               alt=""
               class="w-full aspect-[4/5] object-cover"
             />
 
-            <h3 class="mt-6 text-center text-xl">Daily Shampoo</h3>
+            <h3 class="mt-6 text-center text-xl font-[Majesty]">Rice Tein NPNF®</h3>
 
-            <p class="mt-3 text-center text-neutral-400">
-              Cleanses while preserving natural moisture.
+            <p class="mt-3 text-center text-neutral-400 leading-tight">
+              <span class="whitespace-nowrap">This standout ingredient</span> <br>
+              <span class="whitespace-nowrap">supports a fuller, stronger feel</span> <br>
+              <span class="whitespace-nowrap">with a lightweight touch</span>
             </p>
           </article>
 
           <!-- CARD 05 -->
 
           <article
-            class="group transition-all duration-500 hover:scale-105 hover:z-20"
+            class="group/card transition-all duration-500 hover:scale-120 hover:z-20"
           >
             <img
-              src="img/section04/product05.jpg"
+              src="img/5_INGREDIENTES.png"
               alt=""
               class="w-full aspect-[4/5] object-cover"
             />
 
-            <h3 class="mt-6 text-center text-xl">Beard Balm</h3>
+            <h3 class="mt-6 text-center text-xl font-[Majesty] whitespace-nowrap">Smoked Huckleberry <br> Signature Scent</h3>
 
-            <p class="mt-3 text-center text-neutral-400">
-              Control, nourishment and texture combined.
+            <p class="mt-3 text-center text-neutral-400 leading-tight">
+              <span class="whitespace-nowrap">A fresh opening of bergamot</span> <br>
+              <span class="whitespace-nowrap">and cardamom gives way to</span> <br>
+              <span class="whitespace-nowrap">huckleberry, salted amber,</span> <br>
+              <span class="whitespace-nowrap">patchouli, suede, and smoke</span> <br>
+              <span class="whitespace-nowrap">for a clean, masculine finish</span>
             </p>
           </article>
         </div>
@@ -754,13 +775,23 @@
     </section>
 
     <!-- SECTION 05 -->
-    <section
-      id="section05"
-      class="relative py-32 bg-cover bg-center bg-[url('img/desktop/section05.jpg')] max-md:bg-[url('img/mobile/section05.jpg')]"
-    >
+
+    <section id="section05" class="relative w-full overflow-hidden">
+      <!-- IMÁGENES PARA COMPORTAMIENTO RESPONSIVO Y DEFINIR ALTURA -->
+      <img
+        src="img/perfume.png"
+        alt="Doc Holliday Banner"
+        class="w-full h-auto hidden md:block"
+      />
+      <img
+        src="img/perfume.png"
+        alt="Doc Holliday Banner Mobile"
+        class="w-full h-auto md:hidden"
+      />
+    
       <!-- OVERLAY -->
 
-      <div class="absolute inset-0 bg-black/75"></div>
+      <div class="absolute inset-0></div>
 
       <!-- DESKTOP INDEX -->
 
@@ -784,49 +815,56 @@
         </span>
       </div>
 
-      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+      <di class="absolute inset-0 z-10 max-w-[90%] mx-auto px-6 lg:px-12">
         <!-- TOP -->
 
-        <div class="grid lg:grid-cols-3 gap-12 mb-24">
-          <!-- TITLE -->
+       <div class="grid lg:grid-cols-[1.9fr_1.6fr_1.4fr] gap-12 mb-24">
+  <!-- TITLE -->
+  <div class="max-md:text-center">
+    <h2 class="md:text-[38px] lg:text-[48px] xl:text-[60px] md:leading-9 lg:leading-10 xl:leading-13 font-[Majesty] w-fit max-md:mx-auto">
+      Doc Holliday<br>Casual Cologne
+    </h2>
+  </div>
 
-          <div class="max-md:text-center">
-            <h2 class="text-4xl lg:text-6xl leading-tight">Our Process.</h2>
-          </div>
+  <!-- PARAGRAPH -->
+<div class="flex items-end pt-18">
+  <p class="text-neutral-300 leading-relaxed max-md:text-center">
+    A refined layer of fragrance that stays close<br>and feels intentional throughout the day
+  </p>
+</div>
 
-          <!-- PARAGRAPH -->
-
-          <div class="flex items-center">
-            <p class="text-neutral-300 leading-relaxed max-md:text-center">
-              Every product is developed through a meticulous process that
-              combines premium ingredients, modern formulation techniques and
-              timeless grooming traditions.
-            </p>
-          </div>
-
+<!-- INDEX RIGHT -->
+<div class="hidden lg:flex items-end justify-end gap-16 pb-6">
+  <span class="text-[12px] xl:text-[16px] tracking-widest">05</span>
+  <span class="text-[12px] xl:text-[16px] tracking-widest">PRODUCT OVERVIEW</span>
+</div>
+</div>
           <!-- EMPTY DESKTOP / INDEX SPACE -->
 
-          <div></div>
-        </div>
+          
+        
 
         <!-- PROCESS GRID -->
 
         <div class="lg:ml-auto lg:max-w-4xl">
-          <div class="grid grid-cols-[120px_1fr] border-t border-[#d7a795]">
-            <!-- ROW 01 -->
-
-            <div
-              class="flex items-center justify-center border-r border-b border-[#d7a795] py-10"
-            >
-              <span class="text-5xl lg:text-7xl text-[#d7a795]"> 1 </span>
-            </div>
+ <div class="grid grid-cols-[120px_1fr]">
+  
+  <!-- LABEL ROW -->
+<div class="col-span-2 py-4 px-1 flex items-center gap-4">
+  <span class="text-base tracking-widest whitespace-nowrap text-white font-bold">Core Highlights:</span>
+  <div class="flex-1 h-px bg-[#d7a795]"></div>
+</div>
+  <!-- ROW 01 -->
+   <div class="flex items-center justify-center border-r border-b border-[#d7a795] py-10">
+      <span class="text-5xl lg:text-7xl text-[#d7a795]"> 01 </span>
+    </div>
 
             <div class="border-b border-[#d7a795] p-8">
-              <h3 class="text-2xl">Ingredient Selection</h3>
+              <h3 class="text-2xl"> Smoked Huckleberry — Fougere Amber Spicy</h3>
 
               <p class="mt-4 text-neutral-400">
-                Only premium botanical extracts and performance-driven
-                ingredients make it into our formulations.
+                Warm spice, wild huckleberry, suede, salted amber, and smoke create a rich,
+                close-wearing scent with depth
               </p>
             </div>
 
@@ -835,15 +873,15 @@
             <div
               class="flex items-center justify-center border-r border-b border-[#d7a795] py-10"
             >
-              <span class="text-5xl lg:text-7xl text-[#d7a795]"> 2 </span>
+              <span class="text-5xl lg:text-7xl text-[#d7a795]"> 02 </span>
             </div>
 
             <div class="border-b border-[#d7a795] p-8">
-              <h3 class="text-2xl">Formulation</h3>
+              <h3 class="text-2xl">Desert Echo — Fougere Amber</h3>
 
               <p class="mt-4 text-neutral-400">
-                Each product is tested and refined to ensure exceptional
-                performance and consistency.
+                Dry citrus, prickly pear, rosemary, and orange blossom settle into patchouli, vanilla
+                bean, and tonka for a clean, sun-warmed finish
               </p>
             </div>
 
@@ -852,15 +890,15 @@
             <div
               class="flex items-center justify-center border-r border-b border-[#d7a795] py-10"
             >
-              <span class="text-5xl lg:text-7xl text-[#d7a795]"> 3 </span>
+              <span class="text-5xl lg:text-7xl text-[#d7a795]"> 03 </span>
             </div>
 
             <div class="border-b border-[#d7a795] p-8">
-              <h3 class="text-2xl">Quality Control</h3>
+              <h3 class="text-2xl"> Gambler's Dilemma — Woody Aromatic</h3>
 
               <p class="mt-4 text-neutral-400">
-                Every batch is inspected to meet our standards for
-                effectiveness, safety and luxury.
+                Lemon, grapefruit, and mint open bright, then move into spice, vetiver, frankincense,
+                and musk for a focused, skin-close finish
               </p>
             </div>
 
@@ -869,15 +907,15 @@
             <div
               class="flex items-center justify-center border-r border-[#d7a795] py-10"
             >
-              <span class="text-5xl lg:text-7xl text-[#d7a795]"> 4 </span>
+              <span class="text-5xl lg:text-7xl text-[#d7a795]"> 04 </span>
             </div>
 
             <div class="p-8">
-              <h3 class="text-2xl">Delivery Experience</h3>
+              <h3 class="text-2xl">Bulletproof Soul — Woody Citrus</h3>
 
               <p class="mt-4 text-neutral-400">
-                Carefully packaged products arrive ready to elevate your
-                grooming ritual from day one.
+                Blood orange, bergamot, blueberry, oak, sage, amber, moss, and cedar give this scent a
+                steady, controlled edge
               </p>
             </div>
           </div>
@@ -889,7 +927,7 @@
               href="#section06"
               class="inline-flex items-center gap-4 px-10 py-5 border border-[#d7a795] text-[#d7a795] transition hover:bg-[#d7a795] hover:text-black"
             >
-              LEARN MORE
+              EXPLORE THE COLLECTION
 
               <span> → </span>
             </a>
