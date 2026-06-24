@@ -18,7 +18,7 @@ function updateCarousel() {
     if (window.innerWidth >= 1024) {
 
         track.style.transform =
-            `translateX(-${currentIndex * 48}%)`;
+            `translateX(-${currentIndex * 37}%)`;
 
     } else {
 

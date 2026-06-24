@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
-  <body class="bg-black text-white font-[Helvetica,Arial,sans-serif]">
+  <body class="bg-black text-white font-[Helvetica,Arial,sans-serif] overflow-x-hidden">
     <style>
       /* Oscurecer hermanas cuando una card está en hover */
       .group\/cards article:hover ~ article,
@@ -28,7 +28,7 @@
             <div class="flex items-center justify-between h-20">
                 <!-- LOGO -->
                 <a href="#" class="flex items-center transition duration-300">
-                    <img src="img/logo.png" alt="Logo" class="h-8 sm:h-10 object-contain lg:pr-5">
+                    <img src="img/logo.png" alt="Logo" class="h-8 md:h-10 object-contain lg:pr-5">
                 </a>
                 <!-- DESKTOP NAV -->
                 <nav class="hidden xl:flex items-center gap-8">
@@ -117,30 +117,30 @@
         class="w-full h-auto hidden md:block"
       />
       <img
-        src="img/banner.png"
+        src="img/banner-mobile.png"
         alt="Doc Holliday Banner Mobile"
-        class="w-full h-auto md:hidden"
+        class="w-full h-auto md:hidden mt-[40%]"
       />
 
       <!-- OVERLAY -->
       <div class="absolute inset-0"></div>
       <div
-        class="absolute inset-0 z-10 h-full max-w-4/5 mx-auto grid lg:grid-cols-3 gap-20 items-stretch overflow-y-auto"
+        class="absolute inset-0 z-10 h-full max-w-4/5 ml-[10%] md:mx-auto grid lg:grid-cols-3 gap-20 items-stretch overflow-visible"
       >
         <!-- LEFT -->
-        <div class="text-center sm:text-left">
-          <h1 class="absolute top-[46%] left-[5%] text-[15px] md:text-[10px] lg:text-[11px] xl:text-[20px] tracking-widest">NO GIMMICKS,<br>JUST A PROPER ROUTINE</h1>
-          <img src="img/say when.png" alt="Say When" class="absolute w-[13%] bottom-[27%] left-[5%]"/>
+        <div class="text-center md:text-left">
+          <h1 class="effect absolute top-[18%] md:top-[46%] left-[25%] md:left-[5%] text-[12px] md:text-[10px] lg:text-[11px] xl:text-[20px] tracking-widest">NO GIMMICKS, <br>JUST A PROPER ROUTINE</h1>
+          <img src="img/say when.png" alt="Say When" class="effect-img absolute w-[25%] md:w-[13%] bottom-[65%] md:bottom-[27%] left-2/5 md:left-[5%]"/>
         </div>
         <!-- CENTER -->
-        <div class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-end h-full bottom-[7%]">
+        <div class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-end h-full bottom-0 md:bottom-[7%]">
             <span
-                class="text-center text-[15px] md:text-[10px] lg:text-[11px] xl:text-[20px] tracking-widest flex flex-col items-center">
+                class="text-center text-[12px] md:text-[10px] lg:text-[11px] xl:text-[20px] tracking-widest flex flex-col items-center">
                 SCROLL TO<br>EXPLORE
             </span>
         
             <div
-                class="scroll-oval flex h-11 w-7 sm:h-17 sm:w-12 md:h-12 md:w-8 items-center justify-center rounded-full border-2 border-[#d7a795]">
+                class="scroll-oval flex h-11 w-7 md:h-12 md:w-8 items-center justify-center rounded-full border-2 border-[#d7a795]">
                 <svg class="scroll-arrow h-15 w-10 text-[#d7a795]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M12 5v10" />
@@ -150,7 +150,7 @@
         </div>
         <!-- RIGHT -->
         <div class="text-center lg:text-right">
-          <img src="img/Look great_Smell great_Feel great.png" alt="Look Great, Smell Great, Feel Great" class="absolute w-[16%] bottom-[17%] right-0" />
+          <img src="img/Look great_Smell great_Feel great.png" alt="Look Great, Smell Great, Feel Great" class="effect-img absolute w-[35%] md:w-[16%] bottom-[56.5%] md:bottom-[17%] -right-[5%] md:right-0" />
         </div>
       </div>
     </section>
@@ -163,7 +163,7 @@
         class="w-full h-auto hidden md:block"
       />
       <img
-        src="img/banner.png"
+        src="img/modelos-mobile.png"
         alt="Doc Holliday Banner Mobile"
         class="w-full h-auto md:hidden"
       />
@@ -184,122 +184,115 @@
       </div>
       <div class="absolute inset-0 z-10 max-w-[80%] mx-auto px-6 lg:px-12 mt-[10%]">
         <!-- TOP CONTENT -->
-        <div class="grid lg:grid-cols-2 gap-12 mb-20 2xl:mb-50">
+        <div class="grid lg:grid-cols-2 gap-10 md:gap-12 mb-15 md:mb-20 2xl:mb-50">
           <!-- TITLE -->
           <div>
             <span class="text-[12px] xl:text-[16px] tracking-widest">
               01 INTRO
             </span>
-            <h2 class="effect font-[Majesty] mt-6 text-4xl md:pl-6 xl:pl-15 md:text-[38px] lg:text-[30px] xl:text-[40px] 2xl:text-[50px] md:leading-9 lg:leading-7 xl:leading-10 2xl:leading-13">
+            <h2 class="effect font-[Majesty] text-center md:text-left mt-6 text-[35px] md:pl-6 xl:pl-15 md:text-[38px] lg:text-[30px] xl:text-[40px] 2xl:text-[50px] leading-8 md:leading-9 lg:leading-7 xl:leading-10 2xl:leading-13">
               Straightforward Products for the Outlaw at Heart, Gentleman Always
             </h2>
           </div>
           <!-- PARAGRAPH -->
           <div class="flex items-end">
             <p
-              class="lg:text-right leading-tight max-w-xl lg:ml-auto max-lg:text-center md:text-[10px] lg:text-[12px] xl:text-[16px]"
+              class="lg:text-right leading-tight max-w-xl lg:ml-auto max-lg:text-center text-[13px] md:text-[10px] lg:text-[12px] xl:text-[16px]"
             >
-              Inspired by the lasting presence of Doc Holliday, <br>this brand is made for men who value discipline, <br>detail, and quiet confidence
+              Inspired by the lasting presence of Doc Holliday, this brand is made for men who value discipline, detail, and quiet confidence
             </p>
           </div>
         </div>
         <!-- GRID -->
-        <div class="grid grid-cols-3 grid-rows-2 gap-0">
+        <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 gap-0 min-w-[127%] md:min-w-auto ml-[-10%] md:ml-0">
           <!-- CELL 1 -->
           <div
-            class="flex flex-col lg:flex-row gap-4 p-6 border-r border-b border-[#d7a795] md:px-2 lg:px-5 xl:px-10 2xl:px-13"
+            class="flex flex-row gap-4 py-3 px-1 md:p-6 border-r border-b border-[#d7a795] md:px-2 lg:px-5 xl:px-10 2xl:px-13"
           >
             <img
               src="img/canasta.png"
               alt="Icon 1"
-              class="h-10 md:h-10 lg:h-11 xl:h-16 aspect-square object-cover"
+              class="effect-img w-8 h-8 md:h-10 md:w-10 lg:h-11 lg:w-11 xl:h-16 xl:w-16 aspect-square object-cover"
             />
-            <div class="md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
-              <p class="effect2 text-white">Built for daily grooming</p>
-              <p class="effect2 text-white">and fragrance</p>
+            <div class="text-[12px] md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
+              <p class="effect2 text-white">Built for daily grooming and fragrance</p>
             </div>
           </div>
           <!-- CELL 2 -->
 
           <div
-            class="flex flex-col lg:flex-row gap-4 p-6 border-r border-b border-[#d7a795] md:px-2 lg:px-5 xl:px-10 2xl:px-13"
+            class="flex flex-row gap-4 py-3 px-1 md:p-6 md:border-r border-b border-[#d7a795] md:px-2 lg:px-5 xl:px-10 2xl:px-13"
           >
             <img
               src="img/flor.png"
               alt="Icon 2"
-              class="h-10 md:h-10 lg:h-12 xl:h-16 aspect-square object-cover"
+              class="effect-img w-8 h-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-16 xl:w-16 aspect-square object-cover"
             />
 
-            <div class="md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
-              <p class="effect2 text-white">Doc’s Signature Blend</p>
-              <p class="effect2 text-white">of Arizona-native</p>
-              <p class="effect2 text-white">botanicals</p>
+            <div class="text-[12px] md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
+              <p class="effect2 text-white">Doc’s Signature Blend of Arizona-native botanicals</p>
             </div>
           </div>
 
           <!-- CELL 3 -->
 
           <div
-            class="flex flex-col lg:flex-row gap-4 p-6 border-b border-[#d7a795] md:px-2 lg:px-5 xl:px-10 2xl:px-13"
+            class="flex flex-row gap-4 py-3 px-1 md:p-6 border-b border-r md:border-r-0 border-[#d7a795] md:px-2 lg:px-5 xl:px-10 2xl:px-13"
           >
             <img
               src="img/ciclo.png"
               alt="Icon 3"
-              class="h-10 md:h-10 lg:h-12 xl:h-16 aspect-square object-cover"
+              class="effect-img w-8 h-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-16 xl:w-16 aspect-square object-cover"
             />
 
-            <div class="md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
-              <p class="effect2 text-white">Purposeful</p>
-              <p class="effect2 text-white">ingredient formulations</p>
+            <div class="text-[12px] md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
+              <p class="effect2 text-white">Purposeful ingredient formulations</p>
             </div>
           </div>
 
           <!-- CELL 4 -->
 
           <div
-            class="flex flex-col lg:flex-row gap-4 p-6 border-r border-[#d7a795] md:px-2 lg:px-5 xl:px-10 2xl:px-13"
+            class="flex flex-row gap-4 py-3 px-1 md:p-6 border-b md:border-b-0 md:border-r border-[#d7a795] md:px-2 lg:px-5 xl:px-10 2xl:px-13"
           >
             <img
               src="img/vaso.png"
               alt="Icon 4"
-              class="h-10 md:h-10 lg:h-12 xl:h-16 aspect-square object-cover"
+              class="effect-img w-8 h-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-16 xl:w-16 aspect-square object-cover"
             />
 
-            <div class="md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
-              <p class="effect2 text-white">Clean, controlled</p>
-              <p class="effect2 text-white">results</p>
+            <div class="text-[12px] md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
+              <p class="effect2 text-white">Clean, controlled results</p>
             </div>
           </div>
 
           <!-- CELL 5 -->
 
           <div
-            class="flex flex-col lg:flex-row gap-4 p-6 border-r border-[#d7a795] md:px-2 lg:px-5 xl:px-10 2xl:px-13"
+            class="flex flex-row gap-4 py-3 px-1 md:p-6 border-r border-[#d7a795] md:px-2 lg:px-5 xl:px-10 2xl:px-13"
           >
             <img
               src="img/vaso-flor.png"
               alt="Icon 5"
-              class="h-10 md:h-10 lg:h-12 xl:h-16 aspect-square object-cover"
+              class="effect-img w-8 h-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-16 xl:w-16 aspect-square object-cover"
             />
 
-            <div class="md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
-              <p class="effect2 text-white">Close-wearing, refined</p>
-              <p class="effect2 text-white">scent profiles</p>
+            <div class="text-[12px] md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
+              <p class="effect2 text-white">Close-wearing, refined scent profiles</p>
             </div>
           </div>
 
           <!-- CELL 6 -->
 
-          <div class="flex flex-col lg:flex-row gap-4 p-6 md:px-2 lg:px-5 xl:px-10 2xl:px-13">
+          <div class="flex flex-row gap-4 py-3 px-1 md:p-6 md:px-2 lg:px-5 xl:px-10 2xl:px-13">
             <img
               src="img/check.png"
               alt="Icon 6"
-              class="h-10 md:h-10 lg:h-12 xl:h-16 aspect-square object-cover"
+              class="effect-img w-8 h-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-16 xl:w-16 aspect-square object-cover"
             />
 
-            <div class="md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
-              <p class="effect2 text-white">Keeps beard, hair, and</p>
-              <p class="effect2 text-white">presence in check</p>
+            <div class="text-[12px] md:text-[10px] lg:text-[12px] xl:text-[16px] xl:pl-5">
+              <p class="effect2 text-white">Keeps beard, hair, and presence in check</p>
             </div>
           </div>
         </div>
@@ -314,7 +307,7 @@
         class="w-full h-auto hidden md:block -mt-[33%]"
       />
       <img
-        src="img/banner.png"
+        src="img/black.png"
         alt="Doc Holliday Banner Mobile"
         class="w-full h-auto md:hidden"
       />
@@ -330,24 +323,24 @@
         </span>
       </div>
 
-      <div class="absolute inset-0 z-10 max-w-[80%] mx-auto px-6 lg:px-12 mt-[20%]">
+      <div class="absolute inset-0 z-10 max-w-[95%] md:max-w-[80%] mx-auto px-6 lg:px-12 mt-[-16%] md:mt-[20%]">
         <!-- TOP GRID -->
-        <div class="grid lg:grid-cols-2 gap-16 mb-24 mt-[5%] ml-[7%]">
+        <div class="grid lg:grid-cols-2 gap-5 md:gap-16 mb-24 mt-[5%] ml-[7%]">
           <!-- LEFT -->
           <div class="flex items-center justify-center lg:justify-start">
             <div>
-              <span class="text-[12px] xl:text-[16px] tracking-widest">
+              <span class="text-[12px] xl:text-[16px] tracking-widest ml-[-5%] md:ml-0">
                 02 VALUE SNAPSHOT
               </span>
               <h2
-                class="effect font-[Majesty] mt-[6%] text-center lg:text-left xl:pl-[25%] md:text-[38px] lg:text-[35px] xl:text-[50px] 2xl:text-[60px] md:leading-9 lg:leading-10 xl:leading-13"
+                class="effect font-[Majesty] mt-[6%] text-center lg:text-left xl:pl-[25%] text-[35px] md:text-[38px] lg:text-[35px] xl:text-[50px] 2xl:text-[60px] md:leading-9 lg:leading-10 xl:leading-13"
               >
                 Essentials for the Bold
               </h2>
             </div>
           </div>
           <!-- RIGHT -->
-          <div class="flex flex-col justify-center gap-8 md:text-[10px] lg:text-[12px] xl:text-[16px] xl:mt-[18%] px-10">
+          <div class="flex flex-col justify-center gap-5 md:gap-8 text-[13px] md:text-[10px] lg:text-[12px] xl:text-[16px] xl:mt-[18%] px-2 md:px-10">
             <p
               class="text-center lg:text-left"
             >
@@ -367,7 +360,7 @@
             <img
               src="img/distinctive.png"
               alt="Argan Oil"
-              class="w-15 h-15 lg:w-20 lg:h-20 object-contain shrink-0"
+              class="effect-img w-12 h-12 md:w-15 md:h-15 lg:w-20 lg:h-20 object-contain shrink-0"
             />
             <div>
               <h3 class="md:text-[10px] lg:text-[12px] xl:text-[16px] font-extrabold pb-2">Distinctive</h3>
@@ -381,7 +374,7 @@
             <img
               src="img/list.png"
               alt="Jojoba Oil"
-              class="w-15 h-15 lg:w-20 lg:h-20 object-contain shrink-0"
+              class="effect-img w-12 h-12 md:w-15 md:h-15 lg:w-20 lg:h-20 object-contain shrink-0"
             />
             <div>
               <h3 class="md:text-[10px] lg:text-[12px] xl:text-[16px] font-extrabold pb-2">Simple</h3>
@@ -395,7 +388,7 @@
             <img
               src="img/sheld.png"
               alt="Shea Butter"
-              class="w-15 h-15 lg:w-20 lg:h-20 object-contain shrink-0"
+              class="effect-img w-12 h-12 md:w-15 md:h-15 lg:w-20 lg:h-20 object-contain shrink-0"
             />
             <div>
               <h3 class="md:text-[10px] lg:text-[12px] xl:text-[16px] font-extrabold pb-2">Daily</h3>
@@ -409,7 +402,7 @@
             <img
               src="img/star.png"
               alt="Vitamin E"
-              class="w-15 h-15 lg:w-20 lg:h-20 object-contain shrink-0"
+              class="effect-img w-12 h-12 md:w-15 md:h-15 lg:w-20 lg:h-20 object-contain shrink-0"
             />
             <div>
               <h3 class="md:text-[10px] lg:text-[12px] xl:text-[16px] font-extrabold pb-2">A More Refined</h3>
@@ -422,7 +415,17 @@
       </div>
     </section>
     <!-- SECTION 03 -->
-    <section id="section03" class="relative bg-cover bg-center -mt-[120%] overflow-hidden">
+    <section id="section03" class="relative w-full bg-cover bg-center md:-mt-[120%] overflow-hidden">
+      <img
+        src=""
+        alt="Doc Holliday Banner"
+        class="w-full h-auto hidden"
+      />
+      <img
+        src="img/caballo-mobile.png"
+        alt="Doc Holliday Banner Mobile"
+        class="w-full h-auto md:hidden"
+      />
       <!-- OVERLAY -->
       <div class="absolute inset-0"></div>
       <!-- INDEX -->
@@ -434,14 +437,14 @@
         </span>
       </div>
 
-      <div class="relative z-10 max-w-full mx-auto pl-6 lg:pl-[11%]">
+      <div class="md:relative absolute inset-0 z-10 max-w-full mx-auto pl-6 lg:pl-[11%]">
         <span class="grid grid-cols-1 text-[12px] xl:text-[16px] tracking-widest text-right mr-[16%] mb-[4%] top-0">
               03 PRODUCT OVERVIEW
             </span>
         <div class="grid md:grid-cols-[35%_63%] gap-5 lg:gap-10 xl:gap-17 items-center">
           <!-- LEFT COLUMN -->
           <div class="max-md:text-center">
-            <h2 class="font-[Majesty] md:text-[38px] lg:text-[35px] xl:text-[60px] 2xl:text-[65px] md:leading-9 lg:leading-9 xl:leading-13 whitespace-nowrap">
+            <h2 class="effect font-[Majesty] md:text-[38px] lg:text-[35px] xl:text-[60px] 2xl:text-[65px] md:leading-9 lg:leading-9 xl:leading-13 whitespace-nowrap">
               <span>Doc Holliday</span><br><span>Hair & Beard Care</span>
             </h2>
             <!-- DESKTOP BUTTON -->
@@ -480,7 +483,7 @@
                 <!-- CARD 1 -->
 
                 <article class="shrink-0 w-full lg:w-[35%] mr-6">
-                  <img src="img/1_CARRUSEL.png" alt="Doc Holliday Thick + Strong Hydrating Beard Shampoo" class="w-full object-contain"/>
+                  <img src="img/1_CARRUSEL.png" alt="Doc Holliday Thick + Strong Hydrating Beard Shampoo" class="effect-img w-full object-contain"/>
                   <h3 class="font-[Majesty] text-2xl md:text-[10px] lg:text-[12px] xl:text-[25px] font-extrabold leading-tight mb-2 md:my-2 lg:my-5 px-8 text-center">Doc Holliday Thick + Strong Hydrating Beard Shampoo</h3>
                   <p class="md:text-[10px] lg:text-[12px] xl:text-[16px] px-5 leading-relaxed text-center text-neutral-400">
                     Clears away grime, sweat, and yesterday's dust while helping the beard look thicker and the skin beneath it feel calm and balanced.
@@ -493,7 +496,7 @@
                   <img
                     src="img/2_CARRUSEL.png"
                     alt="Desert Smoke"
-                    class="w-full object-contain"
+                    class="effect-img w-full object-contain"
                   />
 
                   <h3 class="font-[Majesty] text-2xl md:text-[10px] lg:text-[12px] xl:text-[25px] font-extrabold leading-tight mb-2 md:my-2 lg:my-5 px-8 text-center">Doc Holliday Thick + Strong Hydrating and Volumizing Shampoo</h3>
@@ -509,7 +512,7 @@
                   <img
                     src="img/3_CARRUSEL.png"
                     alt=""
-                    class="w-full object-contain"
+                    class="effect-img w-full object-contain"
                   />
 
                   <h3 class="font-[Majesty] text-2xl md:text-[10px] lg:text-[12px] xl:text-[25px] font-extrabold leading-tight mb-2 md:my-2 lg:my-5 px-8 text-center">Doc Holliday Thick + Strong Hydrating and Volumizing Shampoo</h3>
@@ -568,7 +571,7 @@
 
         <div class="max-w-4xl mx-auto text-center">
           <h2
-            class="mt-6 text-4xl md:text-[38px] lg:text-[48px] xl:text-[60px] 2xl:text-[65px] leading-tight md:leading-9 lg:leading-10 xl:leading-13 font-[Majesty]"
+            class="effect mt-6 text-4xl md:text-[38px] lg:text-[48px] xl:text-[60px] 2xl:text-[65px] leading-tight md:leading-9 lg:leading-10 xl:leading-13 font-[Majesty]"
           >
             Formulated <br />
             with Purpose
@@ -601,7 +604,7 @@
             <img
               src="img/1_INGREDIENTES.png"
               alt=""
-              class="w-full aspect-4/5 object-cover"
+              class="effect-img w-full aspect-4/5 object-cover"
             />
 
             <h3 class="mt-6 text-center text-xl font-[Majesty]">
@@ -627,7 +630,7 @@
             <img
               src="img/2_INGREDIENTES.png"
               alt=""
-              class="w-full aspect-4/5 object-cover"
+              class="effect-img w-full aspect-4/5 object-cover"
             />
 
             <h3
@@ -659,7 +662,7 @@
             <img
               src="img/3_INGREDIENTES.png"
               alt=""
-              class="w-full aspect-4/5 object-cover"
+              class="effect-img w-full aspect-4/5 object-cover"
             />
 
             <h3 class="mt-6 text-center text-xl font-[Majesty]">
@@ -688,7 +691,7 @@
             <img
               src="img/4_INGREDIENTES.png"
               alt=""
-              class="w-full aspect-4/5 object-cover"
+              class="effect-img w-full aspect-4/5 object-cover"
             />
 
             <h3 class="mt-6 text-center text-xl font-[Majesty]">
@@ -714,7 +717,7 @@
             <img
               src="img/5_INGREDIENTES.png"
               alt=""
-              class="w-full aspect-4/5 object-cover"
+              class="effect-img w-full aspect-4/5 object-cover"
             />
 
             <h3
@@ -775,7 +778,7 @@
           <!-- TITLE -->
 
           <div class="max-md:text-center xl:pl-[15%]">
-            <h2 class="font-[Majesty] md:text-[38px] lg:text-[40px] xl:text-[50px] 2xl:text-[65px] md:leading-9 lg:leading-10 xl:leading-13">Doc Holliday<br>Casual Cologne</h2>
+            <h2 class="effect font-[Majesty] md:text-[38px] lg:text-[40px] xl:text-[50px] 2xl:text-[65px] md:leading-9 lg:leading-10 xl:leading-13">Doc Holliday <br>Casual Cologne</h2>
           </div>
 
           <!-- PARAGRAPH -->
@@ -809,7 +812,7 @@
             <div
               class="flex items-center justify-center border-b border-[#d7a795] md:py-5 2xl:py-10"
             >
-              <span class="font-[Majesty] text-5xl lg:text-7xl opacity-50"> 01 </span>
+              <span class="effect font-[Majesty] text-5xl lg:text-7xl opacity-50"> 01 </span>
             </div>
 
             <div class="border-b border-[#d7a795] md:py-5 2xl:py-10">
@@ -825,7 +828,7 @@
             <div
               class="flex items-center justify-center border-b border-[#d7a795] md:py-5 2xl:py-10"
             >
-              <span class="font-[Majesty] text-5xl lg:text-7xl opacity-50"> 02 </span>
+              <span class="effect font-[Majesty] text-5xl lg:text-7xl opacity-50"> 02 </span>
             </div>
 
             <div class="border-b border-[#d7a795] md:py-5 2xl:py-10">
@@ -841,7 +844,7 @@
             <div
               class="flex items-center justify-center border-b border-[#d7a795] md:py-5 2xl:py-10"
             >
-              <span class="font-[Majesty] text-5xl lg:text-7xl opacity-50"> 03 </span>
+              <span class="effect font-[Majesty] text-5xl lg:text-7xl opacity-50"> 03 </span>
             </div>
 
             <div class="border-b border-[#d7a795] md:py-5 2xl:py-10">
@@ -857,7 +860,7 @@
             <div
               class="flex items-center justify-center border-[#d7a795] md:py-5 2xl:py-10"
             >
-              <span class="font-[Majesty] text-5xl lg:text-7xl opacity-50"> 04 </span>
+              <span class="effect font-[Majesty] text-5xl lg:text-7xl opacity-50"> 04 </span>
             </div>
 
             <div class="md:py-5 2xl:py-10">
@@ -920,7 +923,7 @@
         <div class="hidden lg:grid lg:grid-cols-2 md:gap-[15%] md:mt-[7%] md:ml-[10%]">
           <!-- LEFT COLUMN -->
           <div>
-            <h2 class="font-[Majesty] md:text-[38px] lg:text-[35px] xl:text-[45px] 2xl:text-[65px] md:leading-9 lg:leading-8 xl:leading-13">Discover Doc Holliday Essentials on Amazon</h2>
+            <h2 class="effect font-[Majesty] md:text-[38px] lg:text-[35px] xl:text-[45px] 2xl:text-[65px] md:leading-9 lg:leading-8 xl:leading-13">Discover Doc Holliday Essentials on Amazon</h2>
 
             <p class="mt-10 text-neutral-300 md:text-[10px] lg:text-[12px] xl:text-[16px]">
               Choose the standard that suits the man you are
@@ -934,13 +937,13 @@
               SHOP THE COLLECTION
             </p>
 
-            <h3 class="font-[Majesty] md:text-[22px] lg:text-[30px] xl:text-[35px] md:leading-6 lg:leading-7 xl:leading-10">Browse the full<br>Doc Holliday<br>line below.</h3>
+            <h3 class="effect font-[Majesty] md:text-[22px] lg:text-[30px] xl:text-[35px] md:leading-6 lg:leading-7 xl:leading-10">Browse the full<br>Doc Holliday<br>line below.</h3>
           </div>
 
           <!-- RIGHT COLUMN -->
 
           <div class="md:ml-[10%]">
-            <h3 class="font-[Majesty] md:text-[38px] lg:text-[40px] xl:text-[45px] 2xl:text-[50px] md:leading-9 lg:leading-10 xl:leading-13">QUESTIONS?</h3>
+            <h3 class="effect font-[Majesty] md:text-[38px] lg:text-[40px] xl:text-[45px] 2xl:text-[50px] md:leading-9 lg:leading-10 xl:leading-13">QUESTIONS?</h3>
 
             <p class="md:text-[12px] lg:text-[20px] xl:text-[30px] md:leading-9 lg:leading-10 xl:leading-13">
               We're Here to Help
@@ -1039,18 +1042,18 @@
         class="w-full py-10 md:pt-10 lg:py-16 text-center border-t border-white/10"
       >
         <p
-          class="text-[10px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-widest uppercase mb-4"
+          class="effect text-[10px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-widest uppercase mb-4"
         >
           Ready to refine your routine?
         </p>
         <h2
-          class="font-[Majesty] text-4xl md:text-[28px] md:leading-7 lg:text-[44px] lg:leading-11 xl:text-[55px] xl:leading-13 tracking-tight text-white font-bold mb-1 md:mb-2 lg:mb-5"
+          class="effect font-[Majesty] text-4xl md:text-[28px] md:leading-7 lg:text-[44px] lg:leading-11 xl:text-[55px] xl:leading-13 tracking-tight text-white font-bold mb-1 md:mb-2 lg:mb-5"
         >
           Shop the collection
         </h2>
         <a
           href="#"
-          class="inline-flex items-center gap-3 text-[11px] md:text-[11px] lg:text-[12px] xl:text-[14px] tracking-[0.22em] text-white uppercase transition-opacity duration-300 hover:opacity-70"
+          class="effect inline-flex items-center gap-3 text-[11px] md:text-[11px] lg:text-[12px] xl:text-[14px] tracking-[0.22em] text-white uppercase transition-opacity duration-300 hover:opacity-70"
         >
           SHOP NOW
           <svg
@@ -1083,7 +1086,7 @@
               <img
                 src="img/LOGO2.png"
                 alt="Doc Holliday Logo"
-                class="h-28 md:h-24 lg:h-32 xl:h-40 2xl:h-50 w-auto object-contain"
+                class="effect-img h-28 md:h-24 lg:h-32 xl:h-40 2xl:h-50 w-auto object-contain"
               />
             </div>
           </div>
@@ -1256,8 +1259,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/carrusel.js"></script>
-    <script src="js/animations.js"></script>
+    <script src="js/navbar.js?v=1.5"></script>
+    <script src="js/carrusel.js?v=1.5"></script>
+    <script src="js/animations.js?v=1.5"></script>
   </body>
 </html>

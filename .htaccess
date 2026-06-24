@@ -1,0 +1,57 @@
+# =====================================================
+#  CACHE CONTROL — Doc Holliday
+#  Sube este archivo a la raiz de tu hosting en Hostinger
+# =====================================================
+
+# Habilitar mod_expires
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # HTML — sin caché (siempre fresco)
+    ExpiresByType text/html                  "access plus 0 seconds"
+
+    # JS y CSS — 1 hora (el ?v= se encarga del bust manual)
+    ExpiresByType application/javascript     "access plus 1 hour"
+    ExpiresByType text/javascript            "access plus 1 hour"
+    ExpiresByType text/css                   "access plus 1 hour"
+
+    # Imágenes — 7 días (no cambian tan seguido)
+    ExpiresByType image/png                  "access plus 7 days"
+    ExpiresByType image/jpeg                 "access plus 7 days"
+    ExpiresByType image/webp                 "access plus 7 days"
+    ExpiresByType image/gif                  "access plus 7 days"
+    ExpiresByType image/svg+xml              "access plus 7 days"
+    ExpiresByType image/x-icon               "access plus 7 days"
+
+    # Fuentes
+    ExpiresByType font/woff2                 "access plus 30 days"
+    ExpiresByType font/woff                  "access plus 30 days"
+</IfModule>
+
+# Headers adicionales de control de caché
+<IfModule mod_headers.c>
+    # HTML: nunca almacenar en caché
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
+    # JS y CSS: cachear 1 hora, revalidar si hay cambio
+    <FilesMatch "\.(js|css)$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+
+    # Imágenes: cachear 7 días
+    <FilesMatch "\.(png|jpg|jpeg|gif|webp|svg|ico)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+</IfModule>
+
+# Comprimir texto para carga más rápida
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
