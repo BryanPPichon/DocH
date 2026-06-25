@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Holliday</title>
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Flip.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css?v=1.1">
+</head>
+
+<body class="bg-black text-white font-[Helvetica,Arial,sans-serif]">
+    <!-- MAIN VERTICAL LINE -->
+    <div class="fixed top-0 left-6 md:left-9 lg:left-15 w-0.5 h-screen bg-[#d7a795] z-40 pointer-events-none"></div>
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-30">
+        <div class="max-w-8xl pt-5 mx-auto px-12 md:pl-20 lg:px-35">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO -->
+                <a href="#" class="flex items-center transition duration-300">
+                    <img src="img/logo.png" alt="Logo" class="h-8 sm:h-10 object-contain lg:pr-5">
+                </a>
+                <!-- DESKTOP NAV -->
+                <nav class="hidden xl:flex items-center gap-8">
+                    <a href="#intro"
+                        class="relative text-sm tracking-[0.14em] text-white transition duration-300 hover:text-[#d7a795] after:absolute after:left-0 after:-bottom-2 after:h-px after:w-0 after:bg-[#d7a795] after:transition-all after:duration-300 hover:after:w-full">
+                        INTRO
+                    </a>
+                    <a href="#hair-beard-care"
+                        class="relative text-sm tracking-[0.14em] text-white transition duration-300 hover:text-[#d7a795] after:absolute after:left-0 after:-bottom-2 after:h-px after:w-0 after:bg-[#d7a795] after:transition-all after:duration-300 hover:after:w-full">
+                        HAIR & BEARD CARE
+                    </a>
+                    <a href="#ingredients"
+                        class="relative text-sm tracking-[0.14em] text-white transition duration-300 hover:text-[#d7a795] after:absolute after:left-0 after:-bottom-2 after:h-px after:w-0 after:bg-[#d7a795] after:transition-all after:duration-300 hover:after:w-full">
+                        OUR INGREDIENTS
+                    </a>
+                    <a href="#colognes"
+                        class="relative text-sm tracking-[0.14em] text-white transition duration-300 hover:text-[#d7a795] after:absolute after:left-0 after:-bottom-2 after:h-px after:w-0 after:bg-[#d7a795] after:transition-all after:duration-300 hover:after:w-full">
+                        COLOGNES
+                    </a>
+                    <a href="#contact"
+                        class="relative text-sm tracking-[0.14em] text-white transition duration-300 hover:text-[#d7a795] after:absolute after:left-0 after:-bottom-2 after:h-px after:w-0 after:bg-[#d7a795] after:transition-all after:duration-300 hover:after:w-full">
+                        CONTACT
+                    </a>
+                    <!-- AMAZON BUTTON -->
+                    <a href="https://www.amazon.com/" target="_blank"
+                        class="relative text-sm font-bold tracking-[0.14em] text-white drop-shadow-[0_0_2px_rgba(255,255,255,0.55)] transition duration-300 hover:text-[#d7a795] after:absolute after:left-0 after:-bottom-2 after:h-px after:w-0 after:bg-[#d7a795] after:transition-all after:duration-300 hover:after:w-full">
+                        SHOP ON AMAZON
+                    </a>
+                </nav>
+                <!-- MOBILE BUTTON -->
+                <button id="menuBtn" class="flex flex-col gap-1.5 xl:hidden">
+                    <span class="h-0.5 w-6 bg-white transition duration-300"></span>
+                    <span class="h-0.5 w-6 bg-white transition duration-300"></span>
+                    <span class="h-0.5 w-6 bg-white transition duration-300"></span>
+                </button>
+            </div>
+        </div>
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu"
+            class="max-h-0 overflow-hidden backdrop-blur-sm transition-all duration-500 ease-in-out xl:hidden">
+            <nav class="flex flex-col gap-6 p-6">
+                <a href="#intro"
+                    class="text-sm tracking-[0.14em] text-white transition duration-300 hover:text-[#d7a795] font-thin">
+                    INTRO
+                </a>
+                <a href="#hair-beard-care"
+                    class="text-sm tracking-[0.14em] text-white transition duration-300 hover:text-[#d7a795] font-thin">
+                    HAIR & BEARD CARE
+                </a>
+                <a href="#ingredients"
+                    class="text-sm tracking-[0.14em] text-white transition duration-300 hover:text-[#d7a795] font-thin">
+                    OUR INGREDIENTS
+                </a>
+                <a href="#colognes"
+                    class="text-sm tracking-[0.14em] text-white transition duration-300 hover:text-[#d7a795] font-thin">
+                    COLOGNES
+                </a>
+                <a href="#contact"
+                    class="text-sm tracking-[0.14em] text-white transition duration-300 hover:text-[#d7a795] font-thin">
+                    CONTACT
+                </a>
+                <a href="https://www.amazon.com/" target="_blank"
+                    class="text-sm font-bold tracking-[0.14em] text-white drop-shadow-[0_0_2px_rgba(255,255,255,0.55)] transition duration-300 hover:text-[#d7a795]">
+                    SHOP ON AMAZON
+                </a>
+            </nav>
+        </div>
+    </header>
+    <!-- SPACER -->
+    <div class="h-20"></div>
+
+    <main class="page-shell">
+        <!-- IMAGEN ÚNICA DE FONDO -->
+        <div class="page-background" aria-hidden="true"></div>
+
+        <!-- HERO -->
+        <section id="hero" class="section-bg relative w-full bg-hero flex items-center justify-center">
+            <!-- TEXTO LATERAL IZQUIERDO -->
+            <div
+                class="hero-side-copy pointer-events-none absolute top-[12%] z-20 -translate-y-1/2 md:top-60 md:left-20 lg:top-90 lg:left-30 xl:top-120 xl:left-55 2xl:top-150 2xl:left-70">
+                <p
+                    class="text-center sm:text-left text-[15px] md:text-[10px] lg:text-[11px] xl:text-[16px] font-extralight uppercase tracking-[0.12em]">
+                    NO GIMMICKS,<br>
+                    JUST A PROPER ROUTINE
+                </p>
+            </div>
+
+            <!-- IMAGEN INFERIOR IZQUIERDA -->
+            <img src="img/say when.png" alt="Say When" aria-hidden="true"
+                class="pointer-events-none top-1/5 absolute z-20 w-[130px] sm:w-[220px] md:top-80 md:left-20 md:w-[100px] lg:top-110 lg:left-30 lg:w-[120px] xl:top-140 xl:left-50 xl:w-[150px] 2xl:top-180 2xl:left-70 2xl:w-[180px] object-contain">
+
+            <!-- IMAGEN INFERIOR DERECHA -->
+            <img src="img/Look great_Smell great_Feel great.png" alt="Look Great, Smell Great, Feel Great"
+                aria-hidden="true"
+                class="pointer-events-none absolute right-[3%] top-[28%] z-20 w-[140px] sm:w-[260px] md:top-95 md:right-10 md:w-[100px] lg:top-125 lg:right-20 lg:w-[140px] xl:top-170 xl:right-40 xl:w-40 2xl:top-220 2xl:right-60 2xl:w-50  object-contain">
+
+            <!-- SCROLL TO EXPLORE -->
+            <div
+                class="scroll-hint absolute bottom-45 left-1/2 z-20 flex -translate-x-1/2 md:bottom-90 lg:bottom-50 xl:bottom-10 2xl:-bottom-30 flex-col items-center gap-1 md:gap-2 pointer-events-none">
+                <p
+                    class="text-center text-[12px] leading-none tracking-widest text-white md:text-[10px] lg:text-[13px] xl:text-[16px]">
+                    SCROLL TO<br>EXPLORE
+                </p>
+
+                <div
+                    class="scroll-oval flex h-11 w-7 sm:h-17 sm:w-12 md:h-12 md:w-8 items-center justify-center rounded-full border-2 border-[#d7a795]">
+                    <svg class="scroll-arrow h-15 w-10 text-[#d7a795]" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <path d="M12 5v10" />
+                        <path d="M7 11l5 5 5-5" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section id="intro" class="section-bg bg-intro relative w-full px-6 lg:px-12 sm:py-32">
+            <!-- SECTION INDICATOR -->
+            <div
+                class="section-indicator intro-indicator absolute -top-135 lg:-top-120 xl:-top-90 2xl:-top-60 left-2 lg:left-6 flex flex-col items-center z-20">
+                <span class="mb-4 text-[16px] md:text-[11px] tracking-widest">
+                    01
+                </span>
+                <div class="mb-4 h-70 md:h-20 lg:h-40 xl:h-60 2xl:h-70 w-0.5 bg-[#d7a795] opacity-70"></div>
+                <span class="writing-mode-vertical text-[16px] md:text-[11px] tracking-widest uppercase">
+                    INTRO
+                </span>
+            </div>
+            <!-- BADGE SUPERIOR (01 INTRO) -->
+            <div
+                class="section-content max-w-7xl mx-5 -top-30 sm:-top-125 md:mx-15 md:-top-115 lg:-top-82 lg:ml-25 xl:mx-35 xl:ml-45 xl:-top-15 2xl:mx-45 2xl:px-25 2xl:ml-60 2xl:top-50">
+                <div class="left-6 top-6 mb-5 lg:left-10 lg:top-1 z-30 pointer-events-none">
+                    <span class="text-[12px] tracking-[0.05em] xl:text-[16px]">01 INTRO</span>
+                </div>
+                <!-- INTRO HEADER -->
+                <div class="grid lg:grid-cols-1 items-center sm:items-start md:pt-2 md:gap-0 lg:pt-4 xl:pt-10">
+                    <h2
+                        class="font-[Majesty] text-center sm:text-left leading-none text-4xl pb-5 md:text-[38px] md:pl-6 md:pb-0 md:leading-9 lg:text-[48px] lg:leading-10 xl:pl-15 xl:text-[60px] xl:leading-13 tracking-tight text-white font-bold">
+                        Straightforward Products for <br>the Outlaw at Heart, Gentleman Always
+                    </h2>
+
+                    <p class="ml-auto text-center leading-tight sm:text-right text-base md:text-[10px] md:w-2/3 lg:text-[12px] xl:text-[16px] 2xl:pt-15">
+                        Inspired by the lasting presence of Doc Holliday, this brand is made for men who value discipline, detail, and quiet confidence
+                    </p>
+                </div>
+                <!-- FEATURE GRID -->
+                <div class="grid grid-cols-2 mt-7 sm:grid-cols-3 gap-0 text-neutral-300 md:mt-7 lg:mt-11 xl:mt-20 2xl:mt-35">
+                    <!-- 1 -->
+                    <div
+                        class="flex items-start gap-3 sm:gap-6 px-1 py-1 sm:px-6 sm:py-8 md:gap-5 md:px-2 md:py-5 lg:gap-5 lg:px-5 lg:py-5 xl:px-10 2xl:px-13">
+                        <img src="img/canasta.png" alt="Icon 1" class="h-10 md:h-10 lg:h-11 xl:h-16 flex-none">
+                        <div
+                            class="text-[10px] leading-3 sm:leading-2.5 md:leading-4 md:text-[10px] lg:text-[12px] lg:leading-5 xl:text-[16px] xl:leading-8">
+                            <p class="text-white">Built for daily grooming</p>
+                            <p class="text-white">and fragrance</p>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div
+                        class="flex items-start gap-3 sm:gap-6 px-1 py-1 sm:px-6 sm:py-8 md:gap-5 md:px-2 md:py-5 lg:gap-5 lg:px-5 lg:py-5 xl:px-10 2xl:px-13 border-l border-[#d7a795]/50">
+                        <img src="img/flor.png" alt="Icon 2" class="h-10 md:h-10 lg:h-12 xl:h-16 flex-none">
+                        <div
+                            class="text-[10px] leading-3 sm:leading-2.5 md:leading-4 md:text-[10px] lg:text-[12px] lg:leading-5 xl:text-[16px] xl:leading-7">
+                            <p class="text-white">Doc’s Signature Blend</p>
+                            <p class="text-white">of Arizona-native</p>
+                            <p class="text-white">botanicals</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div
+                        class="flex items-start gap-3 sm:gap-6 px-1 py-1 sm:px-6 sm:py-8 md:gap-5 md:px-2 md:py-5 lg:gap-5 lg:px-5 lg:py-5 xl:px-10 2xl:px-13 border-t sm:border-t-0 sm:border-l border-[#d7a795]/50">
+                        <img src="img/ciclo.png" alt="Icon 3" class="h-10 md:h-10 lg:h-12 xl:h-16 flex-none">
+                        <div
+                            class="text-[10px] leading-3 sm:leading-2.5 md:leading-4 md:text-[10px] lg:text-[12px] lg:leading-5 xl:text-[16px] xl:leading-8">
+                            <p class="text-white">Purposeful</p>
+                            <p class="text-white">ingredient formulations</p>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div
+                        class="flex items-start gap-3 sm:gap-6 px-1 py-1 sm:px-6 sm:py-8 md:gap-5 md:px-2 md:py-5 lg:gap-5 lg:px-5 lg:py-5 xl:px-10 2xl:px-13 border-t border-l sm:border-l-0 border-[#d7a795]/50">
+                        <img src="img/vaso.png" alt="Icon 4" class="h-10 md:h-10 lg:h-12 xl:h-16 flex-none">
+                        <div
+                            class="text-[10px] leading-3 sm:leading-2.5 md:leading-4 md:text-[10px] lg:text-[12px] lg:leading-5 xl:text-[16px] xl:leading-8">
+                            <p class="text-white">Clean, controlled</p>
+                            <p class="text-white">results</p>
+                        </div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div
+                        class="flex items-start gap-3 sm:gap-6 px-1 py-1 sm:px-6 sm:py-8 md:gap-5 md:px-2 md:py-5 lg:gap-5 lg:px-5 lg:py-5 xl:px-10 2xl:px-13 border-t sm:border-l border-[#d7a795]/50">
+                        <img src="img/vaso-flor.png" alt="Icon 5" class="h-10 md:h-10 lg:h-12 xl:h-16 flex-none">
+                        <div
+                            class="text-[10px] leading-3 sm:leading-2.5 md:leading-4 md:text-[10px] lg:text-[12px] lg:leading-5 xl:text-[16px] xl:leading-8">
+                            <p class="text-white">Close-wearing, refined</p>
+                            <p class="text-white">scent profiles</p>
+                        </div>
+                    </div>
+
+                    <!-- 6 -->
+                    <div
+                        class="flex items-start gap-3 sm:gap-6 px-1 py-1 sm:px-6 sm:py-8 md:gap-5 md:px-2 md:py-5 lg:gap-5 lg:px-5 lg:py-5 xl:px-10 2xl:px-13 border-t border-l border-[#d7a795]/50">
+                        <img src="img/check.png" alt="Icon 6" class="h-10 md:h-10 lg:h-12 xl:h-16 flex-none">
+                        <div
+                            class="text-[10px] leading-3 sm:leading-2.5 md:leading-4 md:text-[10px] lg:text-[12px] lg:leading-5 xl:text-[16px] xl:leading-8">
+                            <p class="text-white">Keeps beard, hair, and</p>
+                            <p class="text-white">presence in check</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HAIR & BEARD CARE -->
+        <section id="hair-beard-care"
+            class="section-bg bg-hair w-full relative mt-100 px-6 md:-mt-15 md:px-30 py-8 lg:py-0 xl:py-5 xl:mt-80 2xl:mt-220 2xl:mb-30">
+            <!-- SECTION INDICATOR -->
+            <div
+                class="section-indicator hair-beard-care-indicator absolute top-32 md:-top-20 2xl:-top-50 left-2 lg:left-6 flex flex-col items-center z-20">
+                <span class="mb-4 text-[10px] md:text-[11px] tracking-widest">
+                    02
+                </span>
+                <div class="mb-4 h-24 md:h-20 xl:h-40 2xl:h-70 w-0.5 bg-[#d7a795] opacity-70"></div>
+                <span class="writing-mode-vertical text-[10px] md:text-[11px] tracking-widest uppercase">
+                    VALUE SNAPSHOT
+                </span>
+            </div>
+            <div class="section-content max-w-7xl mx-auto">
+                <!-- Header (left large title / right copy) -->
+                <div class="grid mt-23 md:grid-cols-2 items-start overflow-visible md:gap-5">
+                    <div>
+                        <p class="mb-2 ml-5 md:ml-5 md:pt-5 lg:ml-20 xl:ml-50 text-[12px] tracking-[0.05em] xl:text-[16px]">
+                            02 VALUE SNAPSHOT
+                        </p>
+                        <h2
+                            class="font-[Majesty] text-4xl text-center sm:text-left md:text-[38px] md:ml-10 md:leading-9 lg:text-[48px] lg:ml-30 lg:mt-5 lg:leading-10 xl:ml-60 xl:mt-10 xl:text-[60px] xl:leading-13 tracking-tight text-white font-bold relative z-10">
+                                Essentials for the Bold
+                        </h2>
+                    </div>
+                    <div
+                        class="max-w-lg text-center md:text-right space-y-5 relative z-0 md:pt-6 lg:pt-12 lg:pr-13 xl:pt-15 xl:pr-35">
+                        <p class="text-center sm:text-left pt-5 text-base md:text-[10px] lg:text-[12px] xl:text-[16px]">
+                            Designed for men who want grooming to <br>feel simple, refined, and worth repeating.
+                        </p>
+                        <p class="text-center sm:text-left text-base md:text-[10px] lg:text-[12px] xl:text-[16px]">
+                            Doc Holliday brings together <br>close-wearing fragrance and effective <br>daily care in one
+                            line.
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature grid with center divider -->
+                <div class="mt-10 mx-5 md:mt-10 relative border-t border-[#d7a795] pt-5 xl:mt-25 md:pt-10">
+                    <!-- vertical divider -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-5 bottom-1 w-0.5 bg-[#d7a795] block"
+                        aria-hidden="true"></div>
+                    <div class="grid grid-cols-2 md:grid-cols-2 gap-y-8 gap-x-5 sm:gap-x-10 md:gap-x-20">
+                        <!-- LEFT COLUMN (two features) -->
+                        <div class="space-y-8 xl:pl-40">
+                            <!-- feature 1 -->
+                            <div class="flex items-start gap-2 sm:gap-6">
+                                <img src="img/distinctive.png" alt="Icon 1"
+                                    class="h-10 md:w-11 lg:w-15 lg:h-13 xl:w-30 xl:h-25 flex-none"></img>
+                                <div>
+                                    <h3
+                                        class="text-[10px] text-white font-semibold md:text-[15px] md:leading-4 xl:text-[16px] xl:leading-6">
+                                        Distinctive, Not <br>Overpowering</h3>
+                                    <p
+                                        class="text-[10px] leading-2.5 md:leading-3 md:text-[10px] lg:text-[12px] lg:leading-5 xl:text-[16px]">
+                                        Casual Cologne adds <br>presence without taking <br>over the room</p>
+                                </div>
+                            </div>
+                            <!-- feature 2 -->
+                            <div class="flex items-start gap-2 sm:gap-6 xl:ml-5">
+                                <img src="img/sheld.png" alt="Icon 1"
+                                    class="h-13 w-10 md:w-10 md:h-13 lg:w-15 lg:h-20 xl:w-25 xl:h-30 flex-none"></img>
+                                <div>
+                                    <h3
+                                        class="text-[10px] text-white font-semibold md:text-[15px] md:leading-4 xl:text-[16px] xl:leading-6">
+                                        Daily <br>Performance</h3>
+                                    <p
+                                        class="text-[10px] leading-2.5 md:leading-3 md:text-[10px] lg:text-[12px] lg:leading-5 xl:text-[16px]">
+                                        Beard and hair care <br>formulas developed to <br>meet the highest standard</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- RIGHT COLUMN (two features, right aligned) -->
+                        <div class="space-y-8 xl:pl-20">
+                            <!-- feature 3 -->
+                            <div class="flex items-start gap-2 sm:gap-6">
+                                <img src="img/list.png" alt="Icon 1"
+                                    class="h-10 md:h-11 lg:h-15 xl:w-25 xl:h-28 flex-none"></img>
+                                <div>
+                                    <h3
+                                        class="whitespace-nowrap text-[10px] text-white font-semibold md:text-[15px] md:leading-4 xl:text-[16px] xl:leading-6">
+                                        Simple, Efficient Routine</h3>
+                                    <p
+                                        class="text-[10px] leading-2.5 md:leading-3 md:text-[10px] lg:text-[12px] lg:leading-5 xl:text-[16px]">
+                                        <br>Every product designed to move <br>seamlessly from one step to the next
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- feature 4 -->
+                            <div class="flex items-start gap-2 sm:gap-6">
+                                <img src="img/star.png" alt="Icon 1"
+                                    class="h-10 md:h-11 lg:h-15 xl:w-25 xl:h-25 flex-none"></img>
+                                <div>
+                                    <h3
+                                        class="whitespace-nowrap text-[10px] text-white font-semibold md:text-[15px] md:leading-4 xl:text-[16px] xl:leading-6">
+                                        A More Refined Standard</h3>
+                                    <p
+                                        class="text-[10px] leading-2.5 md:leading-3 md:text-[10px] lg:text-[12px] lg:leading-5 xl:text-[16px] ">
+                                        <br>Exceptional formulations, designed <br>with genuine intention
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- OUR INGREDIENTS -->
+        <section id="ingredients"
+            class="section-bg bg-ingredients relative w-full px-6 md:px-0 py-10 md:py-0 lg:py-5 overflow-hidden xl:mt-20 2xl:mt-50">
+            <!-- SECTION INDICATOR -->
+            <div
+                class="section-indicator ingredients-indicator absolute top-32 md:top-2 lg:top-15 left-2 lg:left-6 flex flex-col items-center z-20">
+                <span class="mb-4 text-[10px] md:text-[11px] tracking-widest">
+                    03
+                </span>
+                <div class="mb-4 h-24 lg:h-30 xl:h-50 2xl:h-70 w-0.5 bg-[#d7a795] opacity-70"></div>
+                <span class="writing-mode-vertical text-[10px] md:text-[11px] tracking-widest uppercase">
+                    PRODUCT OVERVIEW
+                </span>
+            </div>
+            <p
+                class="mb-3 ml-5 text-[10px] md:text-[10px] lg:text-[12px] md:px-15 md:mb-6 lg:px-30 lg:mb-10 xl:text-[16px] xl:px-45 2xl:px-65 2xl:mb-25 tracking-[0.05em] text-left sm:text-right w-full">
+                03 PRODUCT OVERVIEW
+            </p>
+            <div class="section-content max-w-7xl mx-auto md:ml-20 lg:ml-27 xl:ml-35 2xl:ml-55 2xl:max-w-none">
+                <!-- Layout: izquierda copy / derecha carousel -->
+                <div class="flex flex-col md:flex-row md:items-start md:gap-0 w-full">
+                    <!-- COLUMNA IZQUIERDA: copy -->
+                    <div
+                        class="shrink-0 md:w-[38%] lg:w-[40%] xl:w-[32%] flex flex-col justify-center pr-8 lg:pr-0 py-4 md:py-10 lg:py-8 xl:pt-20 2xl:pt-25">
+                        <h2
+                            class="text-center sm:text-left font-[Majesty] text-4xl md:text-[28px] md:leading-7 lg:text-[38px] lg:leading-10 xl:text-[55px] xl:leading-12 tracking-tight text-white font-bold mb-5 md:mb-0 whitespace-nowrap">
+                            <span>Doc Holliday</span><br><span>Hair & Beard Care</span>
+                        </h2>
+                        <!-- Navigation: solo next + counter -->
+                        <div
+                            class="flex items-center gap-4 justify-end w-full md:translate-x-9 lg:translate-x-0 lg:pr-2 xl:pr-0 xl:translate-x-20 2xl:py-10">
+                            <button id="ingr-next"
+                                class="ingr-arrow flex items-center justify-center w-10 h-10 md:w-9 md:h-9 xl:w-12 xl:h-12 rounded-full border border-[#d7a795] text-[#d7a795] transition-all duration-300 hover:bg-[#d7a795] hover:text-black"
+                                aria-label="Next ingredient">
+                                <svg class="w-4 h-4 2xl:w-10 2xl:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 12H5" />
+                                    <path d="M12 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p
+                            class="text-base md:text-[10px] lg:text-[12px] xl:text-[16px] leading-relaxed md:leading-3 mb-5 md:mb-5 lg:mb-10 lg:leading-4 xl:leading-6 xl:mb-15 max-w-xs">
+                            Specialiced hair and beard products for the<br>discerning man. Each formula has a
+                            clear<br>place in the routine, working together to<br>cleanse, condition, soften, and
+                            leave<br>everything looking and feeling its best.
+                        </p>
+                        <p
+                            class="text-base md:text-[10px] lg:text-[12px] xl:text-[16px] leading-relaxed max-w-xs flex items-center gap-2">
+                            EXPLORE THE COLLECTION
+                            <svg class="w-6 h-6 text-[#d7a795]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h14" />
+                                <path d="M12 5l7 7-7 7" />
+                            </svg>
+                        </p>
+                    </div>
+
+                    <!-- COLUMNA DERECHA: cards de ingredientes -->
+                    <div
+                        class="relative flex-1 overflow-hidden md:min-h-[420px] lg:min-h-[520px] xl:min-h-[620px] md:ml-5 xl:ml-30">
+                        <!-- Track deslizante -->
+                        <div id="ingr-track"
+                            class="flex gap-4 md:gap-5 lg:gap-6 transition-transform duration-700 ease-in-out">
+
+                            <!-- Card 1: Aloe -->
+                            <div class="ingr-card shrink-0 w-[75vw] md:w-[37%] lg:w-[40%] xl:w-[42%]">
+                                <div class="ingr-card-img overflow-hidden rounded-sm h-[45vw] md:h-[25vw] lg:h-[25vw]">
+                                    <img src="img/1_CARRUSEL.png" alt="Aloe Vera"
+                                        class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                                </div>
+                                <div class="pt-5 md:pt-4 lg:pt-6 2xl:p-10">
+                                    <h3
+                                        class="text-white font-[Majesty] text-2xl md:text-[12px] lg:text-[15px] xl:text-[32px] font-bold leading-tight mb-2 md:mb-2 lg:mb-3">
+                                        Doc Holliday Thick +<br>Strong Hydrating<br>Beard Shampoo
+                                    </h3>
+                                    <p
+                                        class="text-white/80 text-base md:text-[10px] lg:text-[12px] xl:text-[16px] leading-relaxed">
+                                        Clears away grime, sweat, and yesterday's dust while helping the beard look
+                                        thicker and the skin beneath it feel calm and balanced.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Cactus -->
+                            <div class="ingr-card shrink-0 w-[75vw] md:w-[37%] lg:w-[40%] xl:w-[42%]">
+                                <div class="ingr-card-img overflow-hidden rounded-sm h-[45vw] md:h-[25vw] lg:h-[25vw]">
+                                    <img src="img/2_CARRUSEL.png" alt="Cactus Extract"
+                                        class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                                </div>
+                                <div class="pt-5 md:pt-4 lg:pt-6 2xl:p-10">
+                                    <h3
+                                        class="text-white font-[Majesty] text-2xl md:text-[12px] lg:text-[15px] xl:text-[32px] font-bold leading-tight mb-2 md:mb-2 lg:mb-3">
+                                        Doc Holliday Thick +<br>Strong Hydrating and<br>Volumizing Shampoo
+                                    </h3>
+                                    <p
+                                        class="text-white/80 text-base md:text-[10px] lg:text-[12px] xl:text-[16px] leading-relaxed">
+                                        Cuts through sweat, oil, and buildup while helping hair look fuller, feel
+                                        stronger, and stay comfortable at the scalp.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Sage -->
+                            <div class="ingr-card shrink-0 w-[75vw] md:w-[37%] lg:w-[40%] xl:w-[42%]">
+                                <div class="ingr-card-img overflow-hidden rounded-sm h-[45vw] md:h-[25vw] lg:h-[25vw]">
+                                    <img src="img/3_CARRUSEL.png" alt="Desert Sage"
+                                        class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                                </div>
+                                <div class="pt-5 md:pt-4 lg:pt-6 2xl:p-10">
+                                    <h3
+                                        class="text-white font-[Majesty] text-2xl md:text-[12px] lg:text-[15px] xl:text-[32px] font-bold leading-tight mb-2 md:mb-2 lg:mb-3">
+                                        Doc Holliday Thick +<br>Strong Hydrating and<br>Volumizing Shampoo
+                                    </h3>
+                                    <p
+                                        class="text-white/80 text-base md:text-[10px] lg:text-[12px] xl:text-[16px] leading-relaxed">
+                                        Cuts through sweat, oil, and buildup while helping hair look fuller, feel
+                                        stronger, and stay comfortable at the scalp.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div><!-- /track -->
+                    </div><!-- /columna derecha -->
+
+                </div><!-- /flex row -->
+            </div>
+        </section>
+
+        <!-- COLOGNES -->
+        <section id="colognes" class="section-bg bg-colognes relative w-full px-6 md:mt-20 lg:px-12 xl:mt-20 2xl:mt-50">
+            <!-- SECTION INDICATOR -->
+            <div
+                class="section-indicator colognes-indicator absolute top-32 md:top-20 xl:top-50 left-2 lg:left-6 flex flex-col items-center z-20">
+                <span class="mb-4 text-[10px] md:text-[11px] tracking-none">
+                    04
+                </span>
+                <div class="mb-4 h-24 lg:h-40 xl:h-50 2xl:h-70 w-0.5 bg-[#d7a795] opacity-70"></div>
+                <span class="writing-mode-vertical text-[10px] md:text-[11px] tracking-none uppercase">
+                    PRODUCT INGREDIENTS AND DIFFERENTIATORS
+                </span>
+            </div>
+            <div
+                class="section-indicator contact-indicator absolute bottom-40 md:bottom-40 lg:bottom-60 xl:bottom-80 2xl:bottom-110 left-2 lg:left-6 flex flex-col items-center z-20">
+                <span class="mb-4 text-[10px] md:text-[11px] tracking-widest">
+                    05
+                </span>
+                <div class="mb-4 h-24 lg:h-40 xl:h-60 2xl:h-80 w-0.5 bg-[#d7a795] opacity-70"></div>
+                <span class="writing-mode-vertical text-[10px] md:text-[11px] tracking-widest uppercase">
+                    PRODUCT OVERVIEW
+                </span>
+            </div>
+            <p
+                class="mb-3 text-[10px] md:text-[10px] lg:text-[12px] md:px-15 md:mb-6 lg:px-20 lg:pt-5 lg:mb-10 xl:text-[16px] xl:px-30 tracking-[0.05em] w-full">
+                04 PRODUCT INGREDIENTS AND DIFFERENTIATORS
+            </p>
+            <div class="section-content max-w-7xl mx-auto md:ml-20 lg:ml-27 xl:ml-35 pt-10 md:pt-2 lg:pt-5 xl:pt-15 2xl:pt-25">
+
+                <!-- HEADER CENTRADO -->
+                <div class="text-center mb-8 md:mb-10 lg:mb-10 2xl:px-25 2xl:ml-40">
+                    <h2
+                        class="font-[Majesty] text-4xl md:text-[28px] md:leading-7 lg:text-[38px] lg:leading-10 xl:text-[55px] xl:leading-12 tracking-tight text-white font-bold mb-5 md:mb-0 2xl:mb-10">
+                        Formulated<br>with Purpose
+                    </h2>
+                    <div class="max-w-4xl mx-auto text-left md:text-left md:mt-5 md:mx-23 lg:mx-30 xl:mx-55 2xl:mx-25">
+                        <p
+                            class="text-base md:text-[10px] lg:text-[12px] xl:text-[16px] leading-relaxed md:leading-3 mb-5 md:mb-3 lg:mb-5 lg:leading-4 xl:leading-6 xl:mb-15 2xl:mb-10">
+                            Doc Holliday Essentials was developed with a level of ingredient intentionality that is
+                            genuinely rare.
+                        </p>
+                        <p class="text-base md:text-[10px] lg:text-[12px] xl:text-[16px] leading-relaxed text-white/90 2xl:mb-15">
+                            Desert-native botanicals, hand-chosen oils, and precision actives selected for their
+                            performance, <br>unified by a signature scent as singular and considered as Doc Holliday
+                            himself.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- GRID DE 5 COLUMNAS -->
+                <!-- Mobile: apilado; md+: 5 columnas, central más alta -->
+                <div class="flex flex-col gap-8 md:flex-row md:items-start md:gap-3 lg:gap-4 xl:gap-5 mr-7 2xl:mx-7 w-[80vw]">
+
+                    <!-- Col 1: Desert botanicals -->
+                    <div class="flex flex-col md:flex-1">
+                        <div class="cologne-img-wrap overflow-hidden rounded-sm w-full">
+                            <img src="img/1_INGREDIENTES.png" alt="Desert botanicals"
+                                class="cologne-img w-full h-full md:h-[20vw] object-cover">
+                        </div>
+                        <div class="pt-4 text-center 2xl:pt-10">
+                            <h3
+                                class="font-[Majesty] text-xl md:text-[11px] lg:text-[14px] xl:text-[20px] text-white font-bold mb-2 md:mb-1 lg:mb-2">
+                                Desert botanicals
+                            </h3>
+                            <p
+                                class="text-base md:text-[9px] lg:text-[11px] xl:text-[14px] text-white/80 leading-relaxed">
+                                Aloe, agave, jojoba, and prickly pear help hydrate, calm, and keep the formulas balanced
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Col 2: Performance ingredients -->
+                    <div class="flex flex-col md:flex-1">
+                        <div class="cologne-img-wrap overflow-hidden rounded-sm w-full">
+                            <img src="img/2_INGREDIENTES.png" alt="Performance ingredients"
+                                class="cologne-img w-full h-full md:h-[20vw] object-cover">
+                        </div>
+                        <div class="pt-4 text-center 2xl:pt-10">
+                            <h3
+                                class="font-[Majesty] text-xl md:text-[11px] lg:text-[14px] xl:text-[20px] text-white font-bold mb-2 md:mb-1 lg:mb-2">
+                                Performance ingredients
+                            </h3>
+                            <p
+                                class="text-base md:text-[9px] lg:text-[11px] xl:text-[14px] text-white/80 leading-relaxed">
+                                Hydrolyzed rice protein, omegas 3, 6, and 9, and vitamins B5, B7 and E help support
+                                softness, body, and a healthier-looking finish
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Col 3: Premium oils (CENTRAL) -->
+                    <div class="flex flex-col md:flex-1">
+                        <div class="cologne-img-wrap overflow-hidden rounded-sm w-full">
+                            <img src="img/3_INGREDIENTES.png" alt="Premium oils"
+                                class="cologne-img w-full h-full md:h-[20vw] object-cover">
+                        </div>
+                        <div class="pt-4 text-center 2xl:pt-10">
+                            <h3
+                                class="font-[Majesty] text-xl md:text-[12px] lg:text-[16px] xl:text-[22px] text-white font-bold mb-2 md:mb-1 lg:mb-2">
+                                Premium oils
+                            </h3>
+                            <p
+                                class="text-base md:text-[9px] lg:text-[11px] xl:text-[14px] text-white/80 leading-relaxed">
+                                Argan, sacha inchi, grapeseed, castor, marula, kukui, and apricot kernel oils help
+                                condition and smooth without heaviness
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Col 4: Rice Tein NPNF -->
+                    <div class="flex flex-col md:flex-1">
+                        <div class="cologne-img-wrap overflow-hidden rounded-sm w-full">
+                            <img src="img/4_INGREDIENTES.png" alt="Rice Tein NPNF"
+                                class="cologne-img w-full h-full md:h-[20vw] object-cover">
+                        </div>
+                        <div class="pt-4 text-center 2xl:pt-10">
+                            <h3
+                                class="font-[Majesty] text-xl md:text-[11px] lg:text-[14px] xl:text-[20px] text-white font-bold mb-2 md:mb-1 lg:mb-2">
+                                Rice Tein NPNF®
+                            </h3>
+                            <p
+                                class="text-base md:text-[9px] lg:text-[11px] xl:text-[14px] text-white/80 leading-relaxed">
+                                This standout ingredient supports a fuller, stronger feel with a lightweight touch
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Col 5: Smoked Huckleberry -->
+                    <div class="flex flex-col md:flex-1">
+                        <div class="cologne-img-wrap overflow-hidden rounded-sm w-full">
+                            <img src="img/5_INGREDIENTES.png" alt="Smoked Huckleberry Signature Scent"
+                                class="cologne-img w-full h-full md:h-[20vw] object-cover">
+                        </div>
+                        <div class="pt-4 text-center 2xl:pt-10">
+                            <h3
+                                class="font-[Majesty] text-xl md:text-[11px] lg:text-[14px] xl:text-[20px] text-white font-bold mb-2 md:mb-1 lg:mb-2">
+                                Smoked Huckleberry Signature Scent
+                            </h3>
+                            <p
+                                class="text-base md:text-[9px] lg:text-[11px] xl:text-[14px] text-white/80 leading-relaxed">
+                                A fresh opening of bergamot and cardamom gives way to huckleberry, salted amber,
+                                patchouli, suede, and smoke for a clean, masculine finish
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- /grid -->
+            </div>
+            <div
+                class="mb-3 md:mb-6 md:mt-4 lg:mb-10 lg:mt-15 xl:text-[16px] md:px-15 lg:px-15 xl:px-20 xl:mt-25 2xl:mt-65 2xl:pl-60 tracking-[0.05em] w-full">
+                <div class="grid grid-cols-3 items-center text-[10px] md:text-[10px] lg:text-[12px] xl:text-[16px]">
+                    <span class="justify-self-start">
+                        <h2
+                            class="font-[Majesty] text-xl md:text-[28px] md:leading-7 lg:text-[38px] lg:leading-10 xl:text-[55px] xl:leading-12 tracking-tight text-white font-bold mb-5 md:mb-0">
+                            Doc Holliday<br>Casual Cologne
+                        </h2>
+                    </span>
+                    <span class="justify-self-center">
+                        <p class="text-base md:text-[9px] lg:text-[11px] xl:text-[14px] text-white leading-relaxed">
+                            A refined layer of fragrance that stays close and feels intentional throughout the day
+                        </p>
+                    </span>
+                    <span class="justify-self-end">05 PRODUCT OVERVIEW</span>
+                </div>
+            </div>
+            <div
+                class="section-content max-w-4xl mx-auto md:ml-[45%] md:mr-[5%] lg:ml-[45%] lg:mr-[4%] xl:ml-[45%] xl:mr-[4%] 2xl:mr-[15%] py-10 md:pt-2 lg:pt-5 xl:pt-10 2xl:pt-20">
+                <!-- Core Highlights label -->
+                <p class="text-base md:text-[10px] lg:text-[12px] xl:text-[16px] text-white">
+                    Core Highlights:
+                </p>
+
+                <!-- Lista de colognes -->
+                <div class="flex flex-col">
+
+                    <!-- Separador superior -->
+                    <div class="h-px bg-[#d7a795]/40 w-full"></div>
+
+                    <!-- Item 1: Smoked Huckleberry -->
+                    <div class="flex items-center gap-5 md:gap-4 lg:gap-5 py-5 md:py-2 lg:py-3 xl:py-5 2xl:py-8">
+                        <!-- Imagen circular -->
+                        <div
+                            class="shrink-0 w-16 h-16 md:w-14 md:h-14 lg:w-18 lg:h-18 xl:w-24 xl:h-24 rounded-full overflow-hidden border border-white/10">
+                            <img src="img/1_INGREDIENTES.png" alt="Smoked Huckleberry" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Separador vertical -->
+                        <div class="w-px self-stretch bg-[#d7a795]/40 shrink-0"></div>
+                        <!-- Texto -->
+                        <div class="flex flex-col gap-1 md:gap-1.5">
+                            <h3
+                                class="font-[Majesty] text-xl md:text-[11px] lg:text-[18px] xl:text-[26px] text-white font-bold leading-tight">
+                                Smoked Huckleberry — Fougere Amber Spicy
+                            </h3>
+                            <p
+                                class="text-base md:text-[10px] lg:text-[11px] xl:text-[16px] text-white/70 leading-[1.2]">
+                                Warm spice, wild huckleberry, suede, salted amber, and smoke create a rich,
+                                close-wearing scent with depth
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="h-px bg-[#d7a795]/40 w-full"></div>
+
+                    <!-- Item 2: Desert Echo -->
+                    <div class="flex items-center gap-5 md:gap-4 lg:gap-5 py-5 md:py-2 lg:py-3 xl:py-5 2xl:py-8">
+                        <div
+                            class="shrink-0 w-16 h-16 md:w-14 md:h-14 lg:w-18 lg:h-18 xl:w-24 xl:h-24 rounded-full overflow-hidden border border-white/10">
+                            <img src="img/1_INGREDIENTES.png" alt="Desert Echo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-px self-stretch bg-[#d7a795]/40 shrink-0"></div>
+                        <div class="flex flex-col gap-1 md:gap-1.5">
+                            <h3
+                                class="font-[Majesty] text-xl md:text-[11px] lg:text-[18px] xl:text-[26px] text-white font-bold leading-tight">
+                                Desert Echo — Fougere Amber
+                            </h3>
+                            <p
+                                class="text-base md:text-[10px] lg:text-[11px] xl:text-[16px] text-white/70 leading-[1.2]">
+                                Dry citrus, prickly pear, rosemary, and orange blossom settle into patchouli, vanilla
+                                bean, and tonka for a clean, sun-warmed finish
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="h-px bg-[#d7a795]/40 w-full"></div>
+
+                    <!-- Item 3: Gambler's Dilemma -->
+                    <div class="flex items-center gap-5 md:gap-4 lg:gap-5 py-5 md:py-2 lg:py-3 xl:py-5 2xl:py-8">
+                        <div
+                            class="shrink-0 w-16 h-16 md:w-14 md:h-14 lg:w-18 lg:h-18 xl:w-24 xl:h-24 rounded-full overflow-hidden border border-white/10">
+                            <img src="img/1_INGREDIENTES.png" alt="Gambler's Dilemma" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-px self-stretch bg-[#d7a795]/40 shrink-0"></div>
+                        <div class="flex flex-col gap-1 md:gap-1.5">
+                            <h3
+                                class="font-[Majesty] text-xl md:text-[11px] lg:text-[18px] xl:text-[26px] text-white font-bold leading-tight">
+                                Gambler's Dilemma — Woody Aromatic
+                            </h3>
+                            <p
+                                class="text-base md:text-[10px] lg:text-[11px] xl:text-[16px] text-white/70 leading-[1.2]">
+                                Lemon, grapefruit, and mint open bright, then move into spice, vetiver, frankincense,
+                                and musk for a focused, skin-close finish
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="h-px bg-[#d7a795]/40 w-full"></div>
+
+                    <!-- Item 4: Bulletproof Soul -->
+                    <div class="flex items-center gap-5 md:gap-4 lg:gap-5 py-5 md:py-2 lg:py-3 xl:py-5 2xl:py-8">
+                        <div
+                            class="shrink-0 w-16 h-16 md:w-14 md:h-14 lg:w-18 lg:h-18 xl:w-24 xl:h-24 rounded-full overflow-hidden border border-white/10">
+                            <img src="img/1_INGREDIENTES.png" alt="Bulletproof Soul" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-px self-stretch bg-[#d7a795]/40 shrink-0"></div>
+                        <div class="flex flex-col gap-1 md:gap-1.5">
+                            <h3
+                                class="font-[Majesty] text-xl md:text-[11px] lg:text-[18px] xl:text-[26px] text-white font-bold leading-tight">
+                                Bulletproof Soul — Woody Citrus
+                            </h3>
+                            <p
+                                class="text-base md:text-[10px] lg:text-[11px] xl:text-[16px] text-white/70 leading-[1.2]">
+                                Blood orange, bergamot, blueberry, oak, sage, amber, moss, and cedar give this scent a
+                                steady, controlled edge
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- /lista -->
+
+                <!-- Botón EXPLORE THE COLLECTION -->
+                <div class="mt-8 md:mt-6 lg:mt-5 xl:mt-10 2xl:mt-30">
+                    <a href="#"
+                        class="inline-flex items-center gap-4 border border-[#d7a795]/60 px-5 py-1 md:px-5 md:py-2 lg:px-8 lg:py-4 text-white text-base md:text-[10px] lg:text-[12px] xl:text-[16px] tracking-widest transition-all duration-300 hover:bg-[#d7a795]/10 hover:border-[#d7a795]">
+                        EXPLORE THE COLLECTION
+                        <svg class="w-5 h-5 md:w-4 md:h-4 xl:w-6 xl:h-6 text-[#d7a795]" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M5 12h14" />
+                            <path d="M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact"
+            class="section-bg bg-contact relative w-full px-6 lg:px-12 py-1 md:pt-20 lg:pt-20 md:pb-10 2xl:px-40">
+            <!-- SECTION INDICATOR -->
+            <div
+                class="section-indicator contact-indicator absolute top-32 md:top-22 lg:top-40 2xl:top-60 left-2 lg:left-6 flex flex-col items-center z-20">
+                <span class="mb-4 text-[10px] md:text-[11px] tracking-widest">
+                    06
+                </span>
+                <div class="mb-4 h-24 lg:h-40 2xl:h-70 w-0.5 bg-[#d7a795] opacity-70"></div>
+                <span class="writing-mode-vertical text-[10px] md:text-[11px] tracking-widest uppercase">
+                    SHOP
+                </span>
+            </div>
+            <p
+                class="mb-3 text-[10px] md:text-[10px] lg:text-[12px] md:px-20 md:mb-4 lg:px-30 lg:pt-2 lg:mb-10 xl:text-[16px] xl:px-40 xl:pt-10 tracking-[0.05em] w-full">
+                06 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DISCOVER
+            </p>
+            <div class="section-content max-w-7xl mx-auto md:ml-20 lg:ml-27 xl:ml-35 md:pt-1 lg:pt-0 xl:py-5">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-5 lg:gap-5 xl:gap-24 items-start">
+
+                    <!-- COLUMNA IZQUIERDA: titular + CTA -->
+                    <div class="flex flex-col justify-between h-full">
+                        <!-- Título principal -->
+                        <div>
+                            <h2
+                                class="font-[Majesty] text-4xl md:text-[28px] md:leading-7 lg:text-[44px] lg:leading-11 xl:text-[55px] xl:leading-13 tracking-tight text-white font-bold mb-1 md:mb-2 lg:mb-5">
+                                Discover Doc Holliday<br>Essentials on Amazon
+                            </h2>
+                            <p class="text-base md:text-[10px] lg:text-[12px] xl:text-[16px] mb-1 md:mb-4 lg:mb-10 2xl:mb-25">
+                                Choose the standard that suits the man you are
+                            </p>
+                        </div>
+
+                        <!-- Línea divisora -->
+                        <div class="h-px bg-[#d7a795] w-3/4 mb-8 md:mb-4 lg:mb-10 2xl:mb-25 gap-5"></div>
+
+                        <!-- SHOP THE COLLECTION label + subtítulo -->
+                        <div>
+                            <p
+                                class="text-base md:text-[10px] lg:text-[12px] xl:text-[16px] tracking-widest mb-1 md:mb-3 lg:mb-5">
+                                SHOP THE COLLECTION
+                            </p>
+                            <h3
+                                class="font-[Majesty] text-3xl md:text-[22px] md:leading-6 md:pb-10 lg:text-[30px] lg:leading-9 xl:text-[40px] xl:leading-11 text-white font-bold 2xl:pb-35">
+                                Browse the full<br>Doc Holliday<br>line below.
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- COLUMNA DERECHA: formulario -->
+                    <div class="flex flex-col gap-0 md:ml-15 md:mt-5 lg:ml-25 xl:ml-35 2xl:ml-45">
+                        <!-- Título formulario -->
+                        <div class="mb-6 md:mb-5 lg:mb-7">
+                            <h2
+                                class="font-[Majesty] text-3xl md:text-[24px] lg:text-[32px] xl:text-[44px] text-white font-bold leading-tight mb-1">
+                                QUESTIONS?
+                            </h2>
+                            <p class="text-base md:text-[12px] lg:text-[15px] xl:text-[18px] text-white">
+                                We're Here to Help
+                            </p>
+                        </div>
+
+                        <!-- Campos del formulario -->
+                        <form class="flex flex-col gap-3 md:gap-2 lg:gap-3">
+                            <!-- Full Name -->
+                            <input type="text" placeholder="Full Name*"
+                                class="w-full bg-[#d7a795]/50 border-0 px-4 py-3 md:py-2 lg:py-2 xl:py-2 text-white md:text-[10px] lg:text-[12px] xl:text-[16px] focus:outline-none focus:bg-[#d7a795]/20 transition-colors duration-300">
+                            <!-- Email -->
+                            <input type="email" placeholder="Email Address*"
+                                class="w-full bg-[#d7a795]/50 border-0 px-4 py-3 md:py-2 lg:py-2 xl:py-2 text-white md:text-[10px] lg:text-[12px] xl:text-[16px] focus:outline-none focus:bg-[#d7a795]/20 transition-colors duration-300">
+                            <!-- Message -->
+                            <textarea placeholder="Message" rows="4"
+                                class="w-full bg-[#d7a795]/50 border-0 px-4 py-3 md:py-2 lg:py-2 xl:py-2 text-white md:text-[10px] lg:text-[12px] xl:text-[16px] focus:outline-none focus:bg-[#d7a795]/20 transition-colors duration-300 resize-none"></textarea>
+                            <!-- Botón SEND MESSAGE -->
+                            <button type="submit"
+                                class="w-full flex items-center justify-between bg-[#8b1a1a] hover:bg-[#a32020] transition-colors duration-300 px-5 py-3 md:py-2 lg:py-2 xl:py-2 text-white text-base md:text-[10px] lg:text-[12px] xl:text-[16px] tracking-[0.14em] font-medium">
+                                <span>SEND MESSAGE</span>
+                                <svg class="w-5 h-5 md:w-4 md:h-4 xl:w-6 xl:h-6" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M5 12h14" />
+                                    <path d="M12 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </form>
+
+                    </div><!-- /col derecha -->
+
+                </div><!-- /grid -->
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="relative z-50 bg-[#30111c] px-6 lg:px-12">
+
+            <!-- SHOP THE COLLECTION BANNER -->
+            <div class="w-full py-10 md:pt-10 lg:py-16 text-center border-t border-white/10">
+                <p class="text-[10px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-widest uppercase mb-4">
+                    Ready to refine your routine?
+                </p>
+                <h2 class="font-[Majesty] text-4xl md:text-[28px] md:leading-7 lg:text-[44px] lg:leading-11 xl:text-[55px] xl:leading-13 tracking-tight text-white font-bold mb-1 md:mb-2 lg:mb-5">
+                    Shop the collection
+                </h2>
+                <a href="#"
+                    class="inline-flex items-center gap-3 text-[11px] md:text-[11px] lg:text-[12px] xl:text-[14px] tracking-[0.22em] text-white uppercase transition-opacity duration-300 hover:opacity-70">
+                    SHOP NOW
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="border-t border-[#d7a795]"></div>
+
+            <!-- MAIN FOOTER BODY -->
+            <div class="max-w-7xl mx-auto py-12 md:py-14">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 items-start">
+
+                    <!-- LEFT: Logo -->
+                    <div class="flex items-center justify-start md:justify-start">
+                        <div class="flex flex-col items-start">
+                            <img src="img/LOGO2.png" alt="Doc Holliday Logo"
+                                class="h-28 md:h-24 lg:h-32 xl:h-40 2xl:h-50 w-auto object-contain">
+                        </div>
+                    </div>
+
+                    <!-- CENTER: Quick Links (with vertical dividers) -->
+                    <div class="flex items-stretch justify-center">
+                        <!-- Left divider -->
+                        <div class="hidden md:block w-0.5 bg-[#d7a795]/70 self-stretch mx-10 2xl:mx-15"></div>
+
+                        <div class="flex flex-col items-center gap-5">
+                            <p
+                                class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] font-bold tracking-[0.2em] text-white underline underline-offset-4 mb-1">
+                                QUICK LINKS
+                            </p>
+                            <a href="#"
+                                class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-[0.18em] text-white transition duration-300 hover:text-white">
+                                SHOP
+                            </a>
+                            <a href="#intro"
+                                class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-[0.18em] text-white transition duration-300 hover:text-white">
+                                ABOUT
+                            </a>
+                            <a href="#ingredients"
+                                class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-[0.18em] text-white transition duration-300 hover:text-white">
+                                INGREDIENTS
+                            </a>
+                            <a href="#contact"
+                                class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] tracking-[0.18em] text-white transition duration-300 hover:text-white">
+                                CONTACT
+                            </a>
+                        </div>
+
+                        <!-- Right divider -->
+                        <div class="hidden md:block w-0.5 bg-[#d7a795]/70 self-stretch mx-10 2xl:mx-15"></div>
+                    </div>
+
+                    <!-- RIGHT: Follow social -->
+                    <div class="flex flex-col items-start md:items-center gap-6">
+                        <p
+                            class="text-[11px] md:text-[10px] lg:text-[11px] xl:text-[13px] font-bold tracking-[0.2em] text-white underline underline-offset-4">
+                            FOLLOW DOC HOLLIDAY
+                        </p>
+                        <div class="flex items-center gap-6 md:gap-5 lg:gap-7">
+                            <!-- Facebook -->
+                            <a href="#" aria-label="Facebook"
+                                class="text-white/80 transition-all duration-300 hover:text-white hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-8 h-8 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10" viewBox="0 0 24 24"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                            </a>
+                            <!-- Instagram -->
+                            <a href="#" aria-label="Instagram"
+                                class="text-white/80 transition-all duration-300 hover:text-white hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-8 h-8 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <circle cx="12" cy="12" r="4" />
+                                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+                                </svg>
+                            </a>
+                            <!-- Amazon -->
+                            <a href="https://www.amazon.com/" target="_blank" aria-label="Amazon"
+                                class="text-white/80 transition-all duration-300 hover:text-white hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-8 h-8 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10" viewBox="0 0 24 24"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.7-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.872-1.238-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.659 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.891 5.942-1.099v-.41c0-.753.06-1.642-.384-2.294-.385-.579-1.124-.82-1.774-.82-1.205 0-2.277.618-2.54 1.897-.054.285-.261.567-.547.582l-3.055-.33c-.259-.058-.548-.266-.472-.66C6.35 2.695 9.498 2 12.321 2c1.452 0 3.351.385 4.499 1.484 1.454 1.354 1.315 3.165 1.315 5.134v4.647c0 1.397.58 2.011 1.126 2.767.191.268.233.589-.01.788l-2.107 1.975zm3.325 1.987C18.253 21.505 15.42 22.962 12.9 23c-2.667 0-5.314-.971-7.217-2.579-.148-.128-.016-.303.163-.203 2.053 1.193 4.591 1.909 7.211 1.909 1.768 0 3.713-.366 5.503-1.12.271-.115.499.179.242.411v.364zm.671 1.921c-.202.265-.671.124-.975-.063-2.715-1.664-6.875-2.148-10.097-1.175-.428.13-.879-.112-.703-.539.433-1.041 1.556-1.524 3.183-1.817 2.974-.541 6.509.038 8.936 1.636.382.244.441.793.154 1.144l-.498.814z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BOTTOM BAR -->
+            <div class="border-t border-white/10">
+                <div class="max-w-7xl mx-auto py-4 flex flex-col md:flex-row items-center justify-between gap-3">
+                    <p
+                        class="text-[10px] md:text-[9px] lg:text-[10px] xl:text-[11px] tracking-[0.15em] text-white order-2 md:order-1">
+                        2026 DOC HOLLIDAY. ALL RIGHTS RESERVED
+                    </p>
+                    <a href="#"
+                        class="text-[10px] md:text-[9px] lg:text-[10px] xl:text-[11px] tracking-[0.15em] text-white transition duration-300 hover:text-white order-3 md:order-2">
+                        PRIVACY POLICY
+                    </a>
+                    <a href="#"
+                        class="text-[10px] md:text-[9px] lg:text-[10px] xl:text-[11px] tracking-[0.15em] text-white transition duration-300 hover:text-white order-4 md:order-3">
+                        TERMS OF SERVICE
+                    </a>
+                    <p
+                        class="text-[10px] md:text-[9px] lg:text-[10px] xl:text-[11px] font-bold tracking-[0.15em] text-white flex items-center gap-1.5 order-1 md:order-4 underline underline-offset-2">
+                        MADE IN THE USA
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" viewBox="0 0 24 24"
+                            fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </p>
+                </div>
+            </div>
+
+        </footer>
+
+        <!-- JS -->
+        <script src="js/script.js"></script>
+
+</body>
+
+</html>
